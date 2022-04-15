@@ -86,6 +86,7 @@ class Belanja extends CI_Controller
 				'tgl_order' => date('Y-m-d'),
 				'alamat' => $this->input->post('alamat'),
 				'pembayaran' => $this->input->post('pembayaran'),
+				'pasang' => $this->input->post('pasang'),
 				'grand_total' => $this->input->post('grand_total'),
 				'total_bayar' => $this->input->post('total_bayar'),
 				// 'checked' => TRUE,
