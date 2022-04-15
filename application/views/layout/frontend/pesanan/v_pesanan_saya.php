@@ -51,13 +51,18 @@
 														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
 
 														<?php if ($value->status_bayar == 0) { ?>
-															<span class="badge badge-warning">Belum bayar</span>
+															<span class="badge badge-warning">Belum bayar</span><br>
 														<?php } else { ?>
 															<span class="badge badge-success">Sudah bayar</span><br>
 															<span class="badge badge-primary">Menunggu Verifikasi</span>
 														<?php }
 														if ($value->pembayaran == 1) { ?>
-															<span class="badge badge-warning">Bayar Ditempat</span>
+															<span class="badge badge-warning">Bayar Ditempat</span><br>
+														<?php }
+														if ($value->pasang == 1) { ?>
+															<span class="badge badge-info">Pasang Di Tempat</span>
+														<?php } elseif ($value->pasang == 2) { ?>
+															<span class="badge badge-info">Pasang Di Rumah</span>
 														<?php } ?>
 													</td>
 													<td>
@@ -139,7 +144,7 @@
 										<tbody>
 											<?php foreach ($selesai as $key => $value) { ?>
 												<tr>
-													<td><a href="<?= base_url('pesanan_saya/detail_selesai/' . $value->no_order) ?>"><?= $value->no_order ?></td>
+													<td><?= $value->no_order ?></td>
 													<td><?= $value->tgl_order ?></td>
 													</td>
 													<td><?php if ($value->status_order = 2) { ?>
