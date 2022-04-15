@@ -78,7 +78,9 @@
 			</div>
 		</div>
 		<a href="<?= base_url('pesanan_saya') ?>" class="primary-btn">Back</a>
-		<a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="primary-btn">Bayar</a>
+		<?php if ($value->pembayaran == 2) { ?>
+			<a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="primary-btn">Bayar</a>
+		<?php } ?>
 	</div>
 </section>
 <!--================End Order Details Area =================-->
