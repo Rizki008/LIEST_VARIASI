@@ -333,21 +333,6 @@
 <section class="brand-area section_gap">
 	<div class="container">
 		<div class="row">
-			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="<?= base_url() ?>karma-master/img/brand/1.png" alt="">
-			</a>
-			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="<?= base_url() ?>karma-master/img/brand/2.png" alt="">
-			</a>
-			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="<?= base_url() ?>karma-master/img/brand/3.png" alt="">
-			</a>
-			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="<?= base_url() ?>karma-master/img/brand/4.png" alt="">
-			</a>
-			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="<?= base_url() ?>karma-master/img/brand/5.png" alt="">
-			</a>
 		</div>
 	</div>
 </section>
@@ -367,115 +352,28 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-9">
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r1.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
+				<div class="row"><?php foreach ($diskon as $key => $value) { ?>
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<?php echo form_open('belanja/add');
+										echo form_hidden('id', $value->id_produk);
+										echo form_hidden('qty', 1);
+										echo form_hidden('price', $value->harga - $value->diskon);
+										echo form_hidden('name', $value->nama_produk);
+										echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
+								?>
+								<a href="<?= base_url('home/detail_produk') ?>"><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt=""></a>
+								<div class="desc">
+									<a href="<?= base_url('home/detail_produk') ?>" class="title"><?= $value->nama_produk ?></a>
+									<div class="price">
+										<h6>Rp. <?= number_format($value->diskon, 0) ?></h6>
+										<h6 class="l-through">Rp. <?= number_format($value->harga, 0) ?></h6>
+									</div>
 								</div>
+								<?php echo form_close() ?>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r2.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r3.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r5.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r6.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r7.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r9.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r10.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="<?= base_url() ?>karma-master/img/r11.jpg" alt=""></a>
-							<div class="desc">
-								<a href="#" class="title">Black lace Heels</a>
-								<div class="price">
-									<h6>$189.00</h6>
-									<h6 class="l-through">$210.00</h6>
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="col-lg-3">
