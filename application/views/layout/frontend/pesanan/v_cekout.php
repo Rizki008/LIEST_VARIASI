@@ -49,6 +49,12 @@
 								<option value="2">Transfer</option>
 							</select>
 						</div>
+						<div class="col-md-6 form-group p_star">
+							<select name="pasang" id="pasang">
+								<option value="1">Pasang Ditempat</option>
+								<option value="2">Pasang Dirumah</option>
+							</select>
+						</div>
 						<div class="col-md-12 form-group">
 							<textarea class="form-control" name="alamat" id="alamat" rows="1" placeholder="Alamat Lengkap" required></textarea>
 						</div>
