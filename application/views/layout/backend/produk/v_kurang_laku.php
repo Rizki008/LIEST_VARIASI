@@ -83,7 +83,7 @@
 					?>
 
 					<div class="form-group">
-						<label>Nama kategori</label>
+						<label>Jumlah Diskon</label>
 						<input type="number" name="diskon" value="<?= $value->diskon ?>" class="form-control" placeholder="Diskon Produk" required>
 					</div>
 
