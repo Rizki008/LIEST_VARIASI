@@ -44,7 +44,7 @@
 								<td>
 									<div class="media">
 										<div class="d-flex">
-											<img src="<?= base_url('assets/gambar/' . $produk->gambar) ?>" alt="">
+											<img src="<?= base_url('assets/gambar/' . $produk->gambar) ?>" width="200px">
 										</div>
 										<div class="media-body">
 											<p><?php echo $items['name'] ?></p>

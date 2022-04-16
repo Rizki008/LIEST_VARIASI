@@ -21,10 +21,10 @@
 				<li class="nav-item submenu dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kategori Produk</a>
 					<ul class="dropdown-menu">
-						<?php foreach ($kategori as $key => $value) {
-							# code...
-						} ?>
-						<li class="nav-item"><a class="nav-link" href="<?= base_url('home/kategori/' . $value->id_kategori) ?>"><?= $value->nama_kategori ?></a></li>
+						<?php foreach ($kategori as $key => $value) { ?>
+							<li class="nav-item"><a class="nav-link" href="<?= base_url('home/kategori/' . $value->id_kategori) ?>"><?= $value->nama_kategori ?></a></li>
+						<?PHP } ?>
+
 					</ul>
 				</li>
 				<li class="nav-item submenu dropdown">

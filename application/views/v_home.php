@@ -180,7 +180,7 @@
 		</div>
 	</div>
 	<!-- single product slide -->
-	<div class="single-product-slider">
+	<!-- <div class="single-product-slider">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
@@ -237,7 +237,7 @@
 				<?php endif; ?>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </section>
 <!-- end product Area -->
 
