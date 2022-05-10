@@ -180,7 +180,7 @@
 		</div>
 	</div>
 	<!-- single product slide -->
-	<!-- <div class="single-product-slider">
+	<div class="single-product-slider">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
@@ -237,97 +237,11 @@
 				<?php endif; ?>
 			</div>
 		</div>
-	</div> -->
+	</div>
 </section>
 <!-- end product Area -->
 
-<!-- Start exclusive deal Area -->
-<section class="exclusive-deal-area">
-	<div class="container-fluid">
-		<br>
-		<br>
-		<div class="row justify-content-center">
-			<div class="col-lg-6 text-center">
-				<div class="section-title">
-					<h1>Diskon Produk</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore
-						magna aliqua.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row justify-content-center align-items-center">
-			<div class="col-lg-6 no-padding exclusive-right">
-				<div class="active-exclusive-product-slider">
-					<?php foreach ($diskon as $key => $value) { ?>
-						<div class="single-exclusive-slider">
-							<?php
-							echo form_open('belanja/add');
-							echo form_hidden('id', $value->id_produk);
-							echo form_hidden('qty', 1);
-							echo form_hidden('price', $value->harga - $value->diskon);
-							echo form_hidden('name', $value->nama_produk);
-							echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
-							?>
-							<img class="img-fluid" src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt="">
-							<div class="product-details">
-								<div class="price">
-									<p class="price"><?php if ($value->diskon > 0) : ?>
-											<span class="mr-2 l-through">Rp. <?= number_format($value->harga, 0); ?></span><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
-										<?php else : ?>
-											<span class="mr-2"><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
-											<?php endif; ?>
-									</p>
-								</div>
-								<h4><?= $value->nama_produk ?></h4>
-								<div class="add-bag d-flex align-items-center justify-content-center">
-									<button type="submit" class="btn btn-warning" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
-										<span class="ti-bag"></span>
-										<span class="add-text text-uppercase">Add to Bag</span>
-									</button>
-								</div>
-							</div>
-							<?php echo form_close() ?>
-						</div>
-					<?php } ?>
-					<!-- single exclusive carousel -->
-					<?php foreach ($diskon as $key => $value) { ?>
-						<div class="single-exclusive-slider">
-							<?php
-							echo form_open('belanja/add');
-							echo form_hidden('id', $value->id_produk);
-							echo form_hidden('qty', 1);
-							echo form_hidden('price', $value->harga - $value->diskon);
-							echo form_hidden('name', $value->nama_produk);
-							echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
-							?>
-							<img class="img-fluid" src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt="">
-							<div class="product-details">
-								<div class="price">
-									<p class="price"><?php if ($value->diskon > 0) : ?>
-											<span class="mr-2 l-through">Rp. <?= number_format($value->harga, 0); ?></span><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
-										<?php else : ?>
-											<span class="mr-2"><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
-											<?php endif; ?>
-									</p>
-								</div>
-								<h4><?= $value->nama_produk ?></h4>
-								<div class="add-bag d-flex align-items-center justify-content-center">
-									<button type="submit" class="btn btn-warning" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
-										<span class="ti-bag"></span>
-										<span class="add-text text-uppercase">Add to Bag</span>
-									</button>
-								</div>
-							</div>
-							<?php echo form_close() ?>
-						</div>
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End exclusive deal Area -->
+
 
 <!-- Start brand Area -->
 <section class="brand-area section_gap">
@@ -362,7 +276,7 @@
 										echo form_hidden('name', $value->nama_produk);
 										echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 								?>
-								<a href="<?= base_url('home/detail_produk') ?>"><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt=""></a>
+								<a href="<?= base_url('home/detail_produk') ?>"><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt="" width="100px"></a>
 								<div class="desc">
 									<a href="<?= base_url('home/detail_produk') ?>" class="title"><?= $value->nama_produk ?></a>
 									<div class="price">
