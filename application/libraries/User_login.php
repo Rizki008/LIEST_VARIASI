@@ -31,6 +31,8 @@ class User_login
                 redirect('admin');
             } elseif ($level_user == 2) {
                 redirect('pemilik');
+            } elseif ($level_user == 3) {
+                redirect('kasir');
             }
         } else {
             $this->ci->session->set_flashdata('error', 'Username Atau Password Salah');
