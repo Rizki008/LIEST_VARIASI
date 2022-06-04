@@ -81,7 +81,7 @@
 					</ul>
 				</li>
 
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a href="<?= base_url('admin/pesanan_masuk') ?>" class="nav-link <?php if (
 																							$this->uri->segment(2) == 'pesanan_masuk' and $this->uri->segment(1) == 'admin'
 																						) {
@@ -93,9 +93,9 @@
 							<span class="badge badge-info right"></span>
 						</p>
 					</a>
-				</li>
+				</li> -->
 
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a href="<?= base_url('laporan') ?>" class="nav-link <?php if (
 																				$this->uri->segment(1) == 'laporan'
 																			) {
@@ -106,9 +106,9 @@
 							Laporan
 						</p>
 					</a>
-				</li>
+				</li> -->
 
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a href="<?= base_url('user') ?>" class="nav-link <?php if (
 																			$this->uri->segment(1) == 'user'
 																		) {
@@ -119,7 +119,7 @@
 							User
 						</p>
 					</a>
-				</li>
+				</li> -->
 
 				<li class="nav-item">
 					<a href="<?= base_url('auth/logout_user') ?>" class="nav-link">

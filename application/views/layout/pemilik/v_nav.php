@@ -39,61 +39,6 @@
 					</a>
 				</li>
 
-				<!-- <li class="nav-item has-treeview">
-					<a class="nav-link">
-						<i class="nav-icon fas fa-box"></i>
-						<p>
-							Master Produk
-							<i class="right fas fa-angle-left"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item">
-							<a href="<?= base_url('kategori') ?>" class="nav-link <?php if (
-																						$this->uri->segment(1) == 'kategori'
-																					) {
-																						echo "active";
-																					} ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Kategori Produk</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('produk') ?>" class="nav-link <?php if (
-																					$this->uri->segment(1) == 'produk'
-																				) {
-																					echo "active";
-																				} ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Produk Terbaru</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('produk/kurang_laku') ?>" class="nav-link <?php if (
-																								$this->uri->segment(1) == 'produk_kurang_laku'
-																							) {
-																								echo "active";
-																							} ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Produk Kurang Minat</p>
-							</a>
-						</li>
-					</ul>
-				</li>
-
-				<li class="nav-item">
-					<a href="<?= base_url('admin/pesanan_masuk') ?>" class="nav-link <?php if (
-																							$this->uri->segment(2) == 'pesanan_masuk' and $this->uri->segment(1) == 'admin'
-																						) {
-																							echo "active";
-																						} ?>">
-						<i class="nav-icon fas fa-money-check-alt"></i>
-						<p>
-							Transaksi
-							<span class="badge badge-info right"></span>
-						</p>
-					</a>
-				</li> -->
 
 				<li class="nav-item">
 					<a href="<?= base_url('laporan') ?>" class="nav-link <?php if (

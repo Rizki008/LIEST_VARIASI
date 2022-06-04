@@ -19,9 +19,9 @@ class User extends CI_Controller
 		$data = array(
 			'title' => 'Data User',
 			'user' => $this->m_user->get_all_data(),
-			'isi' => 'layout/backend/user/v_user'
+			'isi' => 'layout/pemilik/user/v_user'
 		);
-		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
+		$this->load->view('layout/pemilik/v_wrapper', $data, FALSE);
 	}
 
 	// Add a new item

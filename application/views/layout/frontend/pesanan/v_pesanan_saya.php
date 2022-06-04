@@ -144,7 +144,7 @@
 										<tbody>
 											<?php foreach ($selesai as $key => $value) { ?>
 												<tr>
-													<td><?= $value->no_order ?></td>
+													<td><a href="<?= base_url('pesanan_saya/detail_selesai/' . $value->no_order) ?>"><?= $value->no_order ?></a></td>
 													<td><?= $value->tgl_order ?></td>
 													</td>
 													<td><?php if ($value->status_order = 2) { ?>

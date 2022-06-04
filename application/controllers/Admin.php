@@ -26,6 +26,7 @@ class Admin extends CI_Controller
 			'total_pelanggan' => $this->m_admin->total_pelanggan(),
 			'total_transaksi' => $this->m_admin->total_transaksi(),
 			'grafik' => $this->m_transaksi->grafik(),
+			'grafik_pelanggan' => $this->m_transaksi->grafik_pelanggan(),
 			'isi' => 'v_admin'
 		);
 		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
