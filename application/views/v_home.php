@@ -276,9 +276,9 @@
 										echo form_hidden('name', $value->nama_produk);
 										echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 								?>
-								<a href="<?= base_url('home/detail_produk') ?>"><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt="" width="100px"></a>
+								<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>"><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt="" width="100px"></a>
 								<div class="desc">
-									<a href="<?= base_url('home/detail_produk') ?>" class="title"><?= $value->nama_produk ?></a>
+									<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="title"><?= $value->nama_produk ?></a>
 									<div class="price">
 										<h6>Rp. <?= number_format($value->diskon, 0) ?></h6>
 										<h6 class="l-through">Rp. <?= number_format($value->harga, 0) ?></h6>
