@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Apr 2022 pada 09.36
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.4.27
+-- Waktu pembuatan: 04 Jun 2022 pada 05.43
+-- Versi server: 10.4.20-MariaDB
+-- Versi PHP: 7.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,9 +59,9 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
-(1, 'sembako'),
-(2, 'minuman'),
-(3, 'makanan ringan');
+(1, 'variasi motor'),
+(2, 'banatal mobil'),
+(3, 'skotlet');
 
 -- --------------------------------------------------------
 
@@ -109,9 +109,11 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `id_kategori`, `nama_produk`, `harga`, `diskon`, `stock`, `deskripsi`, `gambar`) VALUES
-(1, 1, 'TROPICANA CHOCO VAN', '350000', NULL, '8', 'sasa', 'bayar.png'),
-(2, 1, 'SIMAS PALMIA', '350000', NULL, '100', 'saas', 'bg30.jpg'),
-(3, 1, 'beras', '350000', NULL, '110', 'sadawa', 'bg40.jpg');
+(1, 2, 'setir takata', '350000', '2000', '8', 'sasa', 'c.jpg'),
+(2, 2, 'bantal mobil', '350000', '500', '96', 'saas', 'b.jpg'),
+(3, 1, 'rem cakram', '350000', NULL, '104', 'sadawa', 'a.jpg'),
+(4, 1, 'kenalpot motor metik', '20600', NULL, '6', 'sasa', 'd.jpg'),
+(5, 1, 'jok mobil', '8000000', NULL, '99', 'dsdsfsfs', 'e.jpg');
 
 -- --------------------------------------------------------
 
@@ -144,7 +146,13 @@ CREATE TABLE `rinci_transaksi` (
 --
 
 INSERT INTO `rinci_transaksi` (`id_rinci`, `no_order`, `id_produk`, `qty`) VALUES
-(1, '20220416OJG6XNDHK', 1, '2');
+(1, '20220416OJG6XNDHK', 1, '2'),
+(2, '20220510GMP2JBE5B', 3, '4'),
+(3, '20220510GMP2JBE5B', 5, '1'),
+(4, '20220510GMP2JBE5B', 2, '1'),
+(5, '20220510MIDHO98GQ', 3, '2'),
+(6, '20220604SSCRKWMLX', 2, '3'),
+(7, '20220604NOA0RV5J3', 4, '4');
 
 --
 -- Trigger `rinci_transaksi`
@@ -169,8 +177,16 @@ CREATE TABLE `riview` (
   `id_produk` int(11) DEFAULT NULL,
   `nama_pelanggan` varchar(125) DEFAULT NULL,
   `tanggal` date DEFAULT NULL,
-  `isi` text DEFAULT NULL
+  `isi` text DEFAULT NULL,
+  `status` int(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `riview`
+--
+
+INSERT INTO `riview` (`id_riview`, `id_pelanggan`, `id_produk`, `nama_pelanggan`, `tanggal`, `isi`, `status`) VALUES
+(1, 1, 1, NULL, '2022-06-04', 'produk sangat bagus', NULL);
 
 -- --------------------------------------------------------
 
@@ -201,7 +217,11 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `no_order`, `tgl_order`, `alamat`, `pembayaran`, `pasang`, `grand_total`, `total_bayar`, `status_order`, `status_bayar`, `atas_nama`, `jml_bayar`, `bukti_bayar`, `nama_pengirim`) VALUES
-(1, 1, '20220416OJG6XNDHK', '2022-04-16', 'aAaSa', '1', '2', '700000', NULL, 3, 0, NULL, NULL, NULL, 'ridwan');
+(1, 1, '20220416OJG6XNDHK', '2022-04-16', 'aAaSa', '1', '2', '700000', NULL, 3, 0, NULL, NULL, NULL, 'ridwan'),
+(2, 1, '20220510GMP2JBE5B', '2022-05-10', 'dsadsadsa', '2', '2', '9750000', NULL, 0, 1, 'wulan', '123444', 'b.jpg', NULL),
+(3, 1, '20220510MIDHO98GQ', '2022-05-10', 'sdadas', '1', '2', '700000', NULL, 3, 0, NULL, NULL, NULL, 'nunu'),
+(4, 1, '20220604SSCRKWMLX', '2022-06-04', 'sadsadsadsadasdsa', '1', '1', '1048500', NULL, 0, 0, NULL, NULL, NULL, NULL),
+(5, 1, '20220604NOA0RV5J3', '2022-06-04', 'dsdsa', '1', '2', '82400', NULL, 1, 0, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -222,7 +242,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `username`, `password`, `level_user`) VALUES
-(1, 'ADMIN', 'admin', 'admin', 1);
+(1, 'ADMIN', 'admin', 'admin', 1),
+(2, 'Pemilik', 'pemilik', 'pemilik', 2),
+(3, 'kasir', 'kasir', 'kasir', 3);
 
 --
 -- Indexes for dumped tables
@@ -308,7 +330,7 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekening`
@@ -320,25 +342,25 @@ ALTER TABLE `rekening`
 -- AUTO_INCREMENT untuk tabel `rinci_transaksi`
 --
 ALTER TABLE `rinci_transaksi`
-  MODIFY `id_rinci` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_rinci` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `riview`
 --
 ALTER TABLE `riview`
-  MODIFY `id_riview` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_riview` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
