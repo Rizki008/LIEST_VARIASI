@@ -16,7 +16,7 @@
 				<img src="<?= base_url() ?>template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
 			</div>
 			<div class="info">
-				<a href="<?= base_url('admin') ?>" class="d-block">
+				<a href="<?= base_url('pemilik') ?>" class="d-block">
 					<?= $this->session->userdata('nama_user'); ?>
 				</a>
 			</div>
@@ -27,11 +27,11 @@
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 				<!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
 				<li class="nav-item">
-					<a href="<?= base_url('admin') ?>" class="nav-link <?php if (
-																			$this->uri->segment(1) == 'admin' and $this->uri->segment(2) == " "
-																		) {
-																			echo "active";
-																		} ?>">
+					<a href="<?= base_url('pemilik') ?>" class="nav-link <?php if (
+																				$this->uri->segment(1) == 'pemilik' and $this->uri->segment(2) == " "
+																			) {
+																				echo "active";
+																			} ?>">
 						<i class="nav-icon fas fa-home"></i>
 						<p>
 							Dashboard
@@ -39,51 +39,10 @@
 					</a>
 				</li>
 
-				<!-- <li class="nav-item has-treeview">
-					<a class="nav-link">
-						<i class="nav-icon fas fa-box"></i>
-						<p>
-							Master Produk
-							<i class="right fas fa-angle-left"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item">
-							<a href="<?= base_url('kategori') ?>" class="nav-link <?php if (
-																						$this->uri->segment(1) == 'kategori'
-																					) {
-																						echo "active";
-																					} ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Kategori Produk</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('produk') ?>" class="nav-link <?php if (
-																					$this->uri->segment(1) == 'produk'
-																				) {
-																					echo "active";
-																				} ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Produk Terbaru</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('produk/kurang_laku') ?>" class="nav-link <?php if (
-																								$this->uri->segment(1) == 'produk_kurang_laku'
-																							) {
-																								echo "active";
-																							} ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Produk Kurang Minat</p>
-							</a>
-						</li>
-					</ul>
-				</li> -->
 
 				<li class="nav-item">
 					<a href="<?= base_url('kasir/pesanan_masuk') ?>" class="nav-link <?php if (
-																							$this->uri->segment(2) == 'pesanan_masuk' and $this->uri->segment(1) == 'admin'
+																							$this->uri->segment(2) == 'pesanan_masuk' and $this->uri->segment(1) == 'transaksi'
 																						) {
 																							echo "active";
 																						} ?>">
@@ -94,32 +53,6 @@
 						</p>
 					</a>
 				</li>
-
-				<!-- <li class="nav-item">
-					<a href="<?= base_url('laporan') ?>" class="nav-link <?php if (
-																				$this->uri->segment(1) == 'laporan'
-																			) {
-																				echo "active";
-																			} ?>">
-						<i class="nav-icon fas fa-address-book"></i>
-						<p>
-							Laporan
-						</p>
-					</a>
-				</li>
-
-				<li class="nav-item">
-					<a href="<?= base_url('user') ?>" class="nav-link <?php if (
-																			$this->uri->segment(1) == 'user'
-																		) {
-																			echo "active";
-																		} ?>">
-						<i class="nav-icon fas fa-users"></i>
-						<p>
-							User
-						</p>
-					</a>
-				</li> -->
 
 				<li class="nav-item">
 					<a href="<?= base_url('auth/logout_user') ?>" class="nav-link">
