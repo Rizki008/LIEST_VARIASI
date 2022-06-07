@@ -117,6 +117,11 @@
 							<th>:</th>
 							<td><input name="nama_pengirim" class="form-control" placeholder="Nama Pengirim" required></td>
 						</tr>
+						<tr>
+							<th>Biaya Tambahan</th>
+							<th>:</th>
+							<td><input name="total_bayar" class="form-control" placeholder="Biaya Tambahan" required></td>
+						</tr>
 
 					</table>
 
