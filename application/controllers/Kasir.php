@@ -73,6 +73,7 @@ class Kasir extends CI_Controller
         $data = array(
             'id_transaksi' => $id_transaksi,
             'nama_pengirim' => $this->input->post('nama_pengirim'),
+            'total_bayar' => $this->input->post('total_bayar'),
             'status_order' => 2
         );
         $this->m_pesanan_masuk->update_order($data);
