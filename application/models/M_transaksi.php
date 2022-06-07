@@ -152,7 +152,7 @@ class M_transaksi extends CI_Model
 		$this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
 		$this->db->join('transaksi', 'rinci_transaksi.no_order = transaksi.no_order', 'left');
 		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
-		$this->db->group_by('rinci_transaksi.id_produk');
+		$this->db->group_by('pelanggan.id_pelanggan');
 		$this->db->order_by('qty', 'desc');
 		return $this->db->get()->result();
 	}
