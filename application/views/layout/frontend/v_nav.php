@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light main_box">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
-		<a class="navbar-brand logo_h" href="<?= base_url() ?>"><img src="<?= base_url() ?>karma-master/img/logosa.png" alt=""></a>
+		<a class="navbar-brand logo_h" href="<?= base_url() ?>"><img src="<?= base_url() ?>karma-master/img/logosa.png" alt="">
+			<h4>Liest Art Variasi</h4>
+		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -37,7 +39,7 @@
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('nama'); ?></a>
 						<ul class="dropdown-menu">
 							<li class="nav-item"><a class="nav-link" href="<?= base_url('pesanan_saya') ?>">Pesanan Saya</a></li>
-							<li class="nav-item"><a class="nav-link" href="<?= base_url('chatting_pelanggan') ?>">Cheting</a></li>
+							<li class="nav-item"><a class="nav-link" href="<?= base_url('chatting_pelanggan') ?>">Chatting</a></li>
 							<li class="nav-item"><a class="nav-link" href="<?= base_url('pelanggan/logout') ?>">Logout</a></li>
 						</ul>
 					<?php } ?>
