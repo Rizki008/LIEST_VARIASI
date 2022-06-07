@@ -123,7 +123,7 @@
 														<button class="btn btn-primary btn-xs btn-flat" data-toggle="modal" data-target="#diterima<?= $value->id_transaksi ?>">Diterima</button>
 													</td>
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->grand_total + $value->total_bayar, 0) ?></b><br>
 														<span class="badge badge-success">DiKirim</span><br>
 													</td>
 												</tr>
@@ -152,7 +152,7 @@
 														<?php } ?>
 													</td>
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->grand_total + $value->total_bayar, 0) ?></b><br>
 														<span class="badge badge-success">Selesai</span><br>
 													</td>
 												</tr>
