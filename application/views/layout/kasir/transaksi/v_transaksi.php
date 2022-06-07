@@ -119,7 +119,7 @@
 								</td>
 								<td><?= $value->nama_pengirim ?></td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->grand_total + $value->total_bayar, 0) ?></b><br>
 									<span class="badge badge-success">Dikirim</span>
 								</td>
 
@@ -148,7 +148,7 @@
 								</td>
 								<td><?= $value->nama_pengirim ?></td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->grand_total + $value->total_bayar, 0) ?></b><br>
 									<span class="badge badge-success">Diterima</span>
 								</td>
 
@@ -174,7 +174,7 @@
 									<?= $value->no_order ?></a>
 								</td>
 								<td><?= $value->tgl_order ?></td>
-								<td><b>Ongkir : Rp. <?= number_format($value->ongkir, 0) ?></b><br>
+								<!-- <td><b>Ongkir : Rp. <?= number_format($value->ongkir, 0) ?></b><br> -->
 								</td>
 								<td>
 									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
