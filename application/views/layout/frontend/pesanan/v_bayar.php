@@ -18,8 +18,34 @@
 <section class="tracking_box_area section_gap">
 	<div class="container">
 		<div class="tracking_box_inner">
-			<p>To track your order please enter your Order ID in the box below and press the "Track" button. This
-				was given to you on your receipt and in the confirmation email you should have received.</p>
+			<p>Silahkan Melakukan pembayaran ke norek dibawah ini dan Upload Bukti pembayaran anda</p>
+			<div class="card card-primary">
+				<div class="card-header">
+					<h3 class="card-title">No Rekening Liest Variasi</h3>
+				</div>
+				<div class="card-body">
+					<div class="form-group">
+						<table class="table">
+							<thead class="thead-primary">
+								<tr>
+									<th>Bank</th>
+									<th>No Rekening</th>
+									<th>Atas Nama</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ($rekening as $key => $value) { ?>
+									<tr>
+										<td><?= $value->nama_bank ?></td>
+										<td><?= $value->no_rek ?></td>
+										<td><?= $value->atas_nama ?></td>
+									</tr>
+								<?php } ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div><br><br><br>
 			<?php
 			//notifikasi form kosong
 			echo validation_errors('<div class="alert alert-warning alert-dismissible">
@@ -41,7 +67,7 @@
 				</div>
 				<div class="col-md-12 form-group">
 					<label for="">Jumlah Bayar</label>
-					<input type="text" class="form-control" name="jml_bayar" placeholder="Jumlah Bayar">
+					<input type="text" class="form-control" placeholder="Rp. <?= number_format($pesanan->grand_total, 0) ?>.-" readonly>
 				</div>
 				<div class="col-md-12 form-group">
 					<label for="">Bukti Bayar</label>
