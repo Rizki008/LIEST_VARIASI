@@ -38,8 +38,6 @@
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
 					<h1>Produk Terlaris</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.</p>
 				</div>
 			</div>
 		</div>
@@ -126,9 +124,6 @@
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
 						<h1><?= $title ?></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore
-							magna aliqua.</p>
 					</div>
 				</div>
 			</div>
@@ -159,12 +154,12 @@
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
+										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
 										</button>
 
-										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info">
+										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info btn-small">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">view more</p>
 										</a>
@@ -186,9 +181,6 @@
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
 						<h1><?= $title ?></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore
-							magna aliqua.</p>
 					</div>
 				</div>
 			</div>
@@ -218,7 +210,7 @@
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
+										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
 										</button>
@@ -258,9 +250,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
-					<h1>Deals of the Week</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.</p>
+					<h1>Produk Diskon</h1>
 				</div>
 			</div>
 		</div>
