@@ -51,8 +51,8 @@
 						</div>
 						<div class="col-md-6 form-group p_star">
 							<select name="pasang" id="pasang">
-								<option value="1">Pasang Ditempat</option>
-								<option value="2">Pasang Dirumah</option>
+								<option value="1">Pasang Ditempat (Biya tambahan Rp 5.000)</option>
+								<option value="2">Pasang Dirumah (Biya tambahan Rp 10.000)</option>
 							</select>
 						</div>
 						<div class="col-md-12 form-group">
