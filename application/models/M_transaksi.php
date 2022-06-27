@@ -81,6 +81,23 @@ class M_transaksi extends CI_Model
 		return $this->db->get()->result();
 	}
 
+	public function add($data)
+	{
+		$this->db->insert('rekening', $data);
+	}
+
+	public function update($data)
+	{
+		$this->db->where('id_rekening', $data['id_rekening']);
+		$this->db->update('rekening', $data);
+	}
+
+	public function delete($data)
+	{
+		$this->db->where('id_rekening', $data['id_rekening']);
+		$this->db->delete('rekening');
+	}
+
 	public function upload_buktibayar($data)
 	{
 		$this->db->where('id_transaksi', $data['id_transaksi']);
