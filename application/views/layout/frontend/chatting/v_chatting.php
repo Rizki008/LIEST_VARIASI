@@ -51,9 +51,10 @@
 						<div class="form-group">
 							<textarea class="form-control" name="pesan" id="pesan" rows="1" placeholder="Enter pesan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter pesan'"></textarea>
 						</div>
+						<button type="submit" value="submit" class="primary-btn">Send pesan</button>
 					</div>
 					<div class="col-md-12 text-right">
-						<button type="submit" value="submit" class="primary-btn">Send pesan</button>
+
 					</div>
 				</form>
 			</div>

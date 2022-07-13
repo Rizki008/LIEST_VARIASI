@@ -8,6 +8,7 @@ class Belanja extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('m_transaksi');
+		$this->load->model('m_lokasi_ongkir');
 	}
 
 	public function index()
@@ -75,6 +76,8 @@ class Belanja extends CI_Controller
 		if ($this->form_validation->run() == FALSE) {
 			$data = array(
 				'title' => 'Langsung Beli',
+				'rekening' => $this->m_transaksi->rekening(),
+				'lokasi' => $this->m_lokasi_ongkir->lokasi(),
 				'isi' => 'layout/frontend/pesanan/v_cekout'
 			);
 			$this->load->view('layout/frontend/v_wrapper', $data, FALSE);
@@ -82,13 +85,15 @@ class Belanja extends CI_Controller
 			//simpan ke tabel transaksi
 			$data = array(
 				'id_pelanggan' => $this->session->userdata('id_pelanggan'),
+				'id_lokasi' => $this->input->post('id_lokasi'),
 				'no_order' => $this->input->post('no_order'),
 				'tgl_order' => date('Y-m-d'),
 				'alamat' => $this->input->post('alamat'),
 				'pembayaran' => $this->input->post('pembayaran'),
-				'pasang' => $this->input->post('pasang'),
+				// 'pasang' => $this->input->post('pasang'),
 				'grand_total' => $this->input->post('grand_total'),
 				'total_bayar' => $this->input->post('total_bayar'),
+				'ongkir' => $this->input->post('ongkir'),
 				// 'checked' => TRUE,
 				'status_bayar' => '0',
 				'status_order' => '0',

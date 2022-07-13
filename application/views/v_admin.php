@@ -9,7 +9,7 @@
 		<div class="icon">
 			<i class="fas fa-shopping-cart"></i>
 		</div>
-		<a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Pesanan Masuk<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Pesanan Masuk<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 
@@ -24,7 +24,7 @@
 		<div class="icon">
 			<i class="ion ion-stats-bars"></i>
 		</div>
-		<a href="<?= base_url('produk') ?>" class="small-box-footer">Jumlah Produk<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('produk') ?>" class="small-box-footer">Jumlah Produk<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 
@@ -39,7 +39,7 @@
 		<div class="icon">
 			<i class="fas fa-users"></i>
 		</div>
-		<a href="<?= base_url('user') ?>" class="small-box-footer">Jumlah Pelanggan<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('user') ?>" class="small-box-footer">Jumlah Pelanggan<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 
@@ -52,7 +52,7 @@
 		<div class="icon">
 			<i class="fas fa-money-check-alt"></i>
 		</div>
-		<a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Total Transaksi Selesai<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Total Transaksi Selesai<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 <!-- Left col -->
@@ -192,7 +192,7 @@
 					<?php
 					foreach ($grafik_pelanggan as $key => $value) {
 						$nama[] = $value->nama;
-						$qty[] = $value->qty;
+						$jml[] = $value->jml;
 					}
 					?>
 					<canvas id="myChartsa" height="100" style="height: 100px;"></canvas>
@@ -205,7 +205,7 @@
 								labels: <?= json_encode($nama) ?>,
 								datasets: [{
 									label: 'Grafik Analisis Pelanggan',
-									data: <?= json_encode($qty) ?>,
+									data: <?= json_encode($jml) ?>,
 									backgroundColor: [
 										'rgba(255, 99, 132, 0.80)',
 										'rgba(54, 162, 235, 0.80)',

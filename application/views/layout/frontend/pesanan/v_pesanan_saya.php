@@ -37,7 +37,7 @@
 											<tr>
 												<th>No Order</th>
 												<th>Tanggal Order</th>
-												<th>Pembayaran Bayar</th>
+												<th>Status Pembayaran</th>
 												<th>Action</th>
 											</tr>
 										</thead>
@@ -48,7 +48,7 @@
 													<td><?= $value->tgl_order ?></td>
 
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 
 														<?php if ($value->status_bayar == 0) { ?>
 															<span class="badge badge-warning">Belum bayar</span><br>
@@ -92,7 +92,7 @@
 													<td><?= $value->tgl_order ?></td>
 													</td>
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 														<span class="badge badge-success">Diverifiksi</span><br>
 														<span class="badge badge-primary">Dikemas</span>
 													</td>
@@ -123,7 +123,7 @@
 														<button class="btn btn-primary btn-xs btn-flat" data-toggle="modal" data-target="#diterima<?= $value->id_transaksi ?>">Diterima</button>
 													</td>
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 														<span class="badge badge-success">DiKirim</span><br>
 													</td>
 												</tr>
@@ -152,8 +152,11 @@
 														<?php } ?>
 													</td>
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 														<span class="badge badge-success">Selesai</span><br>
+													</td>
+													<td>
+														<a href="<?= base_url('pesanan_saya/detail_selesai/' . $value->no_order) ?>" class="btn btn-success">Riview</a>
 													</td>
 												</tr>
 											<?php } ?>
@@ -178,7 +181,7 @@
 													</td>
 													<td><?= $value->catatan ?></td>
 													<td>
-														<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+														<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 														<span class="badge badge-danger">Pesanan Dibatalkan</span><br>
 													</td>
 												</tr>

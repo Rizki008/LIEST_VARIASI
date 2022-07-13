@@ -19,7 +19,7 @@ class Home extends CI_Controller
 	public function index($offset = 0)
 	{
 		$data = array(
-			'title' => 'Dashboard',
+			'title' => 'Katalog Produk',
 			'produk' => $this->m_home->produk(),
 			'diskon' => $this->m_produk->diskon(),
 			// 'best_deal_product' => $this->m_produk->best_deal_product(),

@@ -1,4 +1,4 @@
-<!-- Start Banner Area -->
+<!--Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
@@ -66,15 +66,15 @@
 <section class="product_description_area">
 	<div class="container">
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
-			<li class="nav-item">
+			<!-- <li class="nav-item">
 				<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
-			</li>
+			</li> -->
 			<li class="nav-item">
 				<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews</a>
 			</li>
 		</ul>
 		<div class="tab-content" id="myTabContent">
-			<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+			<!-- <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
 				<p>Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
 					and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
 					Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
@@ -90,7 +90,7 @@
 					the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
 					more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
 					streamlined plan of cooking that is more efficient for one person creating less</p>
-			</div>
+			</div> -->
 			<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
 				<div class="row">
 					<div class="col-lg-12">
@@ -125,8 +125,8 @@
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
 					<h1>Produk Lainnya</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.</p>
+					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua.</p> -->
 				</div>
 			</div>
 		</div>
@@ -154,4 +154,4 @@
 		</div>
 	</div>
 </section>
-<!-- End related-product Area -->
+<!-- End related-product Area

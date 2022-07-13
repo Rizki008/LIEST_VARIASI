@@ -31,10 +31,9 @@
                                         <h5><a href="#"><?= $value->nama_produk ?></a></h5>
                                         <p class="date"><?= $value->tgl_order ?> </p>
                                         <input name="id_produk" class="form-control" cols="30" rows="10" placeholder="isi Produk" value="<?= $value->id_produk ?>" required hidden></input>
-                                        <input name="isi" class="form-control" cols="30" rows="10" placeholder="isi Riview" required></input>
-                                    </div>
-                                    <div class="reply-btn">
-                                        <button type="submit" class="btn-reply text-uppercase">reply</button>
+                                        <textarea name="isi" id="isi" cols="90" rows="10"></textarea>
+                                        <!-- <input name="isi" class="form-control" cols="100" rows="100" placeholder="isi Riview" required></input> -->
+                                        <br><button type="submit" class="btn btn-success">Riview</button>
                                     </div>
                                 </div>
 

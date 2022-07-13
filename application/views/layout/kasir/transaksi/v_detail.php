@@ -79,7 +79,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Rp. <?= number_format($value->grand_total, 0) ?></td>
+						<td>Rp. <?= number_format($value->total_bayar, 0) ?></td>
 						<td><span class="badge badge-primary">Dikemas</span></td>
 						<td class="form-group">
 							<a href="<?= base_url('kasir/pesanan_masuk') ?>" class="btn btn-warning btn-sm">Kembali</a>
@@ -117,6 +117,11 @@
 							<th>:</th>
 							<td><input name="nama_pengirim" class="form-control" placeholder="Nama Pengirim" required></td>
 						</tr>
+						<!-- <tr>
+							<th>Biaya Tambahan</th>
+							<th>:</th>
+							<td><input name="total_bayar" class="form-control" placeholder="Biaya Tambahan" required></td>
+						</tr> -->
 
 					</table>
 

@@ -49,7 +49,7 @@
 								</td>
 								<td><?= $value->tgl_order ?></td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 
 									<?php if ($value->status_bayar == 0) { ?>
 										<span class="badge badge-warning">Belum bayar</span>
@@ -89,7 +89,7 @@
 								<td><a href="<?= base_url('kasir/detail/' . $value->no_order) ?>"><?= $value->no_order ?></a></td>
 								<td><?= $value->tgl_order ?></td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 
 									<span class="badge badge-primary">Dikemas</span>
 
@@ -119,7 +119,7 @@
 								</td>
 								<td><?= $value->nama_pengirim ?></td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 									<span class="badge badge-success">Dikirim</span>
 								</td>
 
@@ -148,7 +148,7 @@
 								</td>
 								<td><?= $value->nama_pengirim ?></td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 									<span class="badge badge-success">Diterima</span>
 								</td>
 
@@ -174,10 +174,10 @@
 									<?= $value->no_order ?></a>
 								</td>
 								<td><?= $value->tgl_order ?></td>
-								<td><b>Ongkir : Rp. <?= number_format($value->ongkir, 0) ?></b><br>
+								<!-- <td><b>Ongkir : Rp. <?= number_format($value->ongkir, 0) ?></b><br> -->
 								</td>
 								<td>
-									<b>Rp. <?= number_format($value->grand_total, 0) ?></b><br>
+									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
 									<span class="badge badge-danger">Pesanan Dibatalkan</span>
 								</td>
 								<td><?= $value->catatan ?></td>
@@ -216,14 +216,9 @@
 							<td><?= $value->alamat ?></td>
 						</tr>
 						<tr>
-							<th>Jumlah Bayar</th>
-							<th>:</th>
-							<td>Rp. <?= number_format($value->jml_bayar, 0) ?></td>
-						</tr>
-						<tr>
 							<th>Total Bayar</th>
 							<th>:</th>
-							<td>Rp. <?= number_format($value->grand_total, 0) ?></td>
+							<td>Rp. <?= number_format($value->total_bayar, 0) ?></td>
 						</tr>
 						<tr>
 							<th>Catatan</th>

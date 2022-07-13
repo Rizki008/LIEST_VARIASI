@@ -26,7 +26,7 @@
 							<li><a href="#"><span>Name :</span> : <?= $value->nama ?></a></li>
 							<li><a href="#"><span>Order number</span> : <?= $value->no_order ?></a></li>
 							<li><a href="#"><span>Date</span> : <?= $value->alamat ?></a></li>
-							<li><a href="#"><span>Total</span> : Rp. <?= number_format($value->grand_total, 0) ?></a></li>
+							<li><a href="#"><span>Total</span> : Rp. <?= number_format($value->total_bayar, 0) ?></a></li>
 							<li><a href="#"><span>Payment method</span> : <?php if ($value->pembayaran == 1) { ?>
 										<span>Bayar Ditempat</span>
 									<?php } else { ?>
@@ -58,19 +58,30 @@
 									<h5>x <?= $value->qty ?></h5>
 								</td>
 								<td>
-									<p>Rp. <?= number_format($value->harga * $value->qty, 0) ?></p>
+									<p>Rp. <?= number_format($value->harga * $value->qty - $value->diskon, 0) ?></p>
 								</td>
 							</tr>
 						<?php } ?>
 						<tr>
 							<td>
+								&nbsp;
+							</td>
+							<td>
+								<h4>Biaya Pemasangan</h4>
+							</td>
+							<td>
+								<p>Rp. <?= number_format($value->ongkir, 0) ?></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;
+							</td>
+							<td>
 								<h4>Total</h4>
 							</td>
 							<td>
-								<h5></h5>
-							</td>
-							<td>
-								<p>Rp. <?= number_format($value->grand_total, 0) ?></p>
+								<p>Rp. <?= number_format($value->total_bayar, 0) ?></p>
 							</td>
 						</tr>
 					</tbody>

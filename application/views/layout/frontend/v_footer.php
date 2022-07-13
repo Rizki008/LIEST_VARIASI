@@ -4,14 +4,15 @@
 		<div class="row">
 			<div class="col-lg-3  col-md-6 col-sm-6">
 				<div class="single-footer-widget">
-					<h6>About Us</h6>
+					<h6>Tentang Kami</h6>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-						magna aliqua.
+						Jl. Raya Ciawigebang, Kec. Ciawigebang
+						Buka 08:00 - 17:00 <br>
+						0821-2296-6634
 					</p>
 				</div>
 			</div>
-			<div class="col-lg-4  col-md-6 col-sm-6">
+			<!-- <div class="col-lg-4  col-md-6 col-sm-6">
 				<div class="single-footer-widget">
 					<h6>Newsletter</h6>
 					<p>Stay update with our latest</p>
@@ -27,18 +28,18 @@
 								<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 								<div style="position: absolute; left: -5000px;">
 									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-								</div>
+								</div> -->
 
-								<!-- <div class="col-lg-4 col-md-4">
+			<!-- <div class="col-lg-4 col-md-4">
 												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
 											</div>  -->
-							</div>
+			<!-- </div>
 							<div class="info"></div>
 						</form>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3  col-md-6 col-sm-6">
+			</div> -->
+			<!-- <div class="col-lg-3  col-md-6 col-sm-6">
 				<div class="single-footer-widget mail-chimp">
 					<h6 class="mb-20">Instragram Feed</h6>
 					<ul class="instafeed d-flex flex-wrap">
@@ -64,7 +65,7 @@
 						<a href="#"><i class="fa fa-behance"></i></a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
 			<p class="footer-text m-0">
@@ -227,6 +228,6 @@
 
 	});
 </script>
-/body>
+</body>
 
 </html>

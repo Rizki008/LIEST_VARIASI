@@ -18,8 +18,7 @@
 <section class="tracking_box_area section_gap">
 	<div class="container">
 		<div class="tracking_box_inner">
-			<p>To track your order please enter your Order ID in the box below and press the "Track" button. This
-				was given to you on your receipt and in the confirmation email you should have received.</p>
+			<p>Silahkan Upload Bukti Pembayaran anda</p>
 			<?php
 			//notifikasi form kosong
 			echo validation_errors('<div class="alert alert-warning alert-dismissible">
@@ -41,7 +40,7 @@
 				</div>
 				<div class="col-md-12 form-group">
 					<label for="">Jumlah Bayar</label>
-					<input type="text" class="form-control" name="jml_bayar" placeholder="Jumlah Bayar">
+					<input type="text" class="form-control" placeholder="Rp. <?= number_format($pesanan->total_bayar, 0) ?>.-" readonly>
 				</div>
 				<div class="col-md-12 form-group">
 					<label for="">Bukti Bayar</label>

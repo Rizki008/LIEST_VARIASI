@@ -9,7 +9,7 @@
 		<div class="icon">
 			<i class="fas fa-shopping-cart"></i>
 		</div>
-		<a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Pesanan Masuk<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Pesanan Masuk<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 
@@ -24,7 +24,7 @@
 		<div class="icon">
 			<i class="ion ion-stats-bars"></i>
 		</div>
-		<a href="<?= base_url('produk') ?>" class="small-box-footer">Jumlah Produk<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('produk') ?>" class="small-box-footer">Jumlah Produk<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 
@@ -39,7 +39,7 @@
 		<div class="icon">
 			<i class="fas fa-users"></i>
 		</div>
-		<a href="<?= base_url('user') ?>" class="small-box-footer">Jumlah Pelanggan<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('user') ?>" class="small-box-footer">Jumlah Pelanggan<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 
@@ -52,7 +52,7 @@
 		<div class="icon">
 			<i class="fas fa-money-check-alt"></i>
 		</div>
-		<a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Total Transaksi Selesai<i class="fas fa-arrow-circle-up"></i></a>
+		<!-- <a href="<?= base_url('admin/pesanan_masuk') ?>" class="small-box-footer">Total Transaksi Selesai<i class="fas fa-arrow-circle-up"></i></a> -->
 	</div>
 </div>
 <section class="col-lg-7 connectedSortable">

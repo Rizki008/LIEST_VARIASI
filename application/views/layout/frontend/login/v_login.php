@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
-				<h1>Login/Register</h1>
+				<h1>Login</h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="category.html">Login/Register</a>
+					<a href="category.html">Login</a>
 				</nav>
 			</div>
 		</div>
@@ -22,9 +22,8 @@
 				<div class="login_box_img">
 					<img class="img-fluid" src="<?= base_url() ?>karma-master/img/login.jpg" alt="">
 					<div class="hover">
-						<h4>New to our website?</h4>
-						<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-						<a class="primary-btn" href="<?= base_url('pelanggan/register') ?>">Create an Account</a>
+						<h4>Register</h4>
+						<a class="primary-btn" href="<?= base_url('pelanggan/register') ?>">Register</a>
 					</div>
 				</div>
 			</div>
@@ -51,7 +50,7 @@
 						echo $this->session->flashdata('pesan');
 						echo '</div>';
 					} ?>
-					<h3>Log in to enter</h3>
+					<h3><?= $title?></h3>
 					<form class="row login_form" action="<?= base_url('pelanggan/login') ?>" method="post" id="contactForm" novalidate="novalidate">
 						<div class="col-md-12 form-group">
 							<input type="email" class="form-control" value="<?= set_value('email') ?>" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
