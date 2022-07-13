@@ -80,6 +80,18 @@
 						</li>
 					</ul>
 				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('rekening') ?>" class="nav-link <?php if (
+																				$this->uri->segment(1) == 'rekening'
+																			) {
+																				echo "active";
+																			} ?>">
+						<i class="nav-icon fas fa-address-book"></i>
+						<p>
+							Rekening
+						</p>
+					</a>
+				</li>
 
 				<!-- <li class="nav-item">
 					<a href="<?= base_url('admin/pesanan_masuk') ?>" class="nav-link <?php if (

@@ -81,6 +81,23 @@ class M_transaksi extends CI_Model
 		return $this->db->get()->result();
 	}
 
+	public function add($data)
+	{
+		$this->db->insert('rekening', $data);
+	}
+
+	public function update($data)
+	{
+		$this->db->where('id_rekening', $data['id_rekening']);
+		$this->db->update('rekening', $data);
+	}
+
+	public function delete($data)
+	{
+		$this->db->where('id_rekening', $data['id_rekening']);
+		$this->db->delete('rekening');
+	}
+
 	public function upload_buktibayar($data)
 	{
 		$this->db->where('id_transaksi', $data['id_transaksi']);
@@ -145,6 +162,19 @@ class M_transaksi extends CI_Model
 	//grafik
 	public function grafik_pelanggan()
 	{
+<<<<<<< HEAD
 		return $this->db->query("SELECT COUNT(transaksi.no_order) as jml, nama FROM transaksi JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY transaksi.id_pelanggan")->result();
+=======
+		$this->db->select_sum('qty');
+		$this->db->select('pelanggan.nama');
+		//$this->db->select('rinci_transaksi.qty');
+		$this->db->from('rinci_transaksi');
+		$this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+		$this->db->join('transaksi', 'rinci_transaksi.no_order = transaksi.no_order', 'left');
+		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->group_by('pelanggan.id_pelanggan');
+		$this->db->order_by('qty', 'desc');
+		return $this->db->get()->result();
+>>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 	}
 }

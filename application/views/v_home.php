@@ -154,12 +154,12 @@
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
+										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
 										</button>
 
-										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info">
+										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info btn-small">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">view more</p>
 										</a>
@@ -210,7 +210,7 @@
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
+										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
 										</button>
@@ -250,7 +250,11 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
+<<<<<<< HEAD
 					<h1>Diskon</h1>
+=======
+					<h1>Produk Diskon</h1>
+>>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 				</div>
 			</div>
 		</div>

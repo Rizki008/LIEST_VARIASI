@@ -42,7 +42,7 @@ class Pesanan_saya extends CI_Controller
 				$data = array(
 					'title' => 'Pembayaran',
 					'pesanan' => $this->m_transaksi->detail_pesanan($id_transaksi),
-					// 'rekening' => $this->m_transaksi->rekening(),
+					'rekening' => $this->m_transaksi->rekening(),
 					'error_upload' => $this->upload->display_errors(),
 					'isi' => 'layout/frontend/pesanan/v_bayar'
 				);
@@ -68,7 +68,7 @@ class Pesanan_saya extends CI_Controller
 		$data = array(
 			'title' => 'Pembayaran',
 			'pesanan' => $this->m_transaksi->detail_pesanan($id_transaksi),
-			// 'rekening' => $this->m_transaksi->rekening(),
+			'rekening' => $this->m_transaksi->rekening(),
 			'isi' => 'layout/frontend/pesanan/v_bayar'
 		);
 		$this->load->view('layout/frontend/v_wrapper', $data, FALSE);
