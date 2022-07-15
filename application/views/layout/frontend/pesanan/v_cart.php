@@ -23,10 +23,10 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th scope="col">Product</th>
-							<th scope="col">Price</th>
+							<th scope="col">Produk</th>
+							<th scope="col">Harga</th>
 							<th scope="col">Quantity</th>
-							<th scope="col">Total</th>
+							<th scope="col">Total Harga</th>
 							<th scope="col">Action</th>
 						</tr>
 					</thead>
@@ -82,7 +82,7 @@
 						<?php } ?>
 						<tr class="bottom_button">
 							<td>
-								<button class="gray_btn">Update Cart</button>
+								<button class="gray_btn">Update Keranjang</button>
 							</td>
 							<td>
 							</td>
@@ -112,8 +112,8 @@
 							</td>
 							<td>
 								<div class="checkout_btn_inner d-flex align-items-center">
-									<a class="gray_btn" href="<?= base_url() ?>">Belanja</a>
-									<a class="primary-btn" href="<?= base_url('belanja/cekout') ?>">Proceed to checkout</a>
+									<a class="gray_btn" href="<?= base_url() ?>">Belanja Kembali</a>
+									<a class="primary-btn" href="<?= base_url('belanja/cekout') ?>">Proses Pembelian</a>
 								</div>
 							</td>
 						</tr>

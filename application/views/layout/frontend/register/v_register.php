@@ -41,7 +41,7 @@
 						echo $this->session->flashdata('pesan');
 						echo '</div>';
 					} ?>
-					<h3><?= $title?></h3>
+					<h3><?= $title ?></h3>
 					<form class="row login_form" action="<?= base_url('pelanggan/register') ?>" method="post" id="contactForm" novalidate="novalidate">
 						<div class="col-md-12 form-group">
 							<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'" value="<?= set_value('nama') ?>">
@@ -70,7 +70,7 @@
 							<input type="text" class="form-control" id="no_tlpn" name="no_tlpn" placeholder="Nomor Telpon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nomor Telpon'" value="<?= set_value('no_tlpn') ?>">
 						</div>
 						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" class="primary-btn">Register</button>
+							<button type="submit" value="submit" class="primary-btn">Registrasi</button>
 						</div>
 					</form>
 					<?php echo form_close() ?>

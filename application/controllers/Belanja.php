@@ -97,6 +97,7 @@ class Belanja extends CI_Controller
 				// 'checked' => TRUE,
 				'status_bayar' => '0',
 				'status_order' => '0',
+				'status_riview' => '0',
 			);
 			$this->m_transaksi->simpan_transaksi($data);
 

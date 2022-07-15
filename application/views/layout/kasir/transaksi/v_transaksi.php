@@ -119,11 +119,7 @@
 								</td>
 								<td><?= $value->nama_pengirim ?></td>
 								<td>
-<<<<<<< HEAD
 									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
-=======
-									<b>Rp. <?= number_format($value->grand_total + $value->total_bayar, 0) ?></b><br>
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 									<span class="badge badge-success">Dikirim</span>
 								</td>
 
@@ -152,11 +148,7 @@
 								</td>
 								<td><?= $value->nama_pengirim ?></td>
 								<td>
-<<<<<<< HEAD
 									<b>Rp. <?= number_format($value->total_bayar, 0) ?></b><br>
-=======
-									<b>Rp. <?= number_format($value->grand_total + $value->total_bayar, 0) ?></b><br>
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 									<span class="badge badge-success">Diterima</span>
 								</td>
 

@@ -66,54 +66,6 @@
 	</div>
 </section>
 
-<!-- start features Area -->
-<section class="features-area section_gap">
-	<div class="container">
-		<div class="row features-inner">
-			<!-- single features -->
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
-					<div class="f-icon">
-						<img src="<?= base_url() ?>karma-master/img/features/f-icon1.png" alt="">
-					</div>
-					<h6>Free Delivery</h6>
-					<p>Free Shipping on all order</p>
-				</div>
-			</div>
-			<!-- single features -->
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
-					<div class="f-icon">
-						<img src="<?= base_url() ?>karma-master/img/features/f-icon2.png" alt="">
-					</div>
-					<h6>Return Policy</h6>
-					<p>Free Shipping on all order</p>
-				</div>
-			</div>
-			<!-- single features -->
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
-					<div class="f-icon">
-						<img src="<?= base_url() ?>karma-master/img/features/f-icon3.png" alt="">
-					</div>
-					<h6>24/7 Support</h6>
-					<p>Free Shipping on all order</p>
-				</div>
-			</div>
-			<!-- single features -->
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
-					<div class="f-icon">
-						<img src="<?= base_url() ?>karma-master/img/features/f-icon4.png" alt="">
-					</div>
-					<h6>Secure Payment</h6>
-					<p>Free Shipping on all order</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- end features Area -->
 
 <!-- start product Area -->
 <section class="owl-carousel active-product-area section_gap">
@@ -250,11 +202,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
-<<<<<<< HEAD
-					<h1>Diskon</h1>
-=======
 					<h1>Produk Diskon</h1>
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 				</div>
 			</div>
 		</div>

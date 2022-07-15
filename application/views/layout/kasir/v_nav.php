@@ -1,11 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 	<!-- Brand Logo -->
-<<<<<<< HEAD
 	<a href="<?= base_url('kasir') ?>" class="brand-link">
-=======
-	<a href="<?= base_url('pemilik') ?>" class="brand-link">
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 		<img src="<?= base_url() ?>template/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 		<span class="brand-text font-weight-light">
 			<h5>Variasi</h5>
@@ -32,10 +28,10 @@
 				<!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
 				<li class="nav-item">
 					<a href="<?= base_url('kasir') ?>" class="nav-link <?php if (
-																				$this->uri->segment(1) == 'kasir' and $this->uri->segment(2) == " "
-																			) {
-																				echo "active";
-																			} ?>">
+																			$this->uri->segment(1) == 'kasir' and $this->uri->segment(2) == " "
+																		) {
+																			echo "active";
+																		} ?>">
 						<i class="nav-icon fas fa-home"></i>
 						<p>
 							Dashboard

@@ -18,6 +18,7 @@
         <div class="row">
             <div class="col-lg-12 posts-list">
                 <div class="comments-area">
+                    <h4>Terima kasih. pesanan Anda telah diterima</h4>
                     <h4>Kritik Saran</h4>
                     <div class="comment-list">
                         <?php foreach ($pesanan_detail as $key => $value) { ?>

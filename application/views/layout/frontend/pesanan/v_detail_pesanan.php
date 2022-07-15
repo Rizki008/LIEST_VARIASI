@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
-				<h1>Confirmation</h1>
+				<h1>Konfirmasi</h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="category.html">Confirmation</a>
+					<a href="category.html">Konfirmasi</a>
 				</nav>
 			</div>
 		</div>
@@ -16,12 +16,12 @@
 <!--================Order Details Area =================-->
 <section class="order_details section_gap">
 	<div class="container">
-		<h3 class="title_confirmation">Thank you. Your order has been received.</h3>
+		<h3 class="title_confirmation">Silahkan Lakukan Pembayaran.</h3>
 		<div class="row order_d_inner">
 			<div class="col-lg-4">
 				<?php foreach ($info as $key => $value) { ?>
 					<div class="details_item">
-						<h4>Order Info</h4>
+						<h4>Informasi Pesanan</h4>
 						<ul class="list">
 							<li><a href="#"><span>Name :</span> : <?= $value->nama ?></a></li>
 							<li><a href="#"><span>Order number</span> : <?= $value->no_order ?></a></li>
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<div class="order_details_table">
-			<h2>Order Details</h2>
+			<h2>Detail Pesanan</h2>
 			<div class="table-responsive">
 				<table class="table">
 					<thead>
@@ -88,7 +88,7 @@
 				</table>
 			</div>
 		</div>
-		<a href="<?= base_url('pesanan_saya') ?>" class="primary-btn">Back</a>
+		<a href="<?= base_url('pesanan_saya') ?>" class="primary-btn">Kembali</a>
 		<?php if ($value->pembayaran == 2) { ?>
 			<a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="primary-btn">Bayar</a>
 		<?php } ?>

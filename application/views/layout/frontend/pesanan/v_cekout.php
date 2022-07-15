@@ -53,18 +53,12 @@
 							</select>
 						</div>
 						<div class="col-md-6 form-group p_star">
-<<<<<<< HEAD
 							<label for="">Jenis Pemasangan</label><br>
 							<select name="id_lokasi" id="ongkir">
 								<option value="">--Pilih Pemasangan--</option>
 								<?php foreach ($lokasi as $key => $value) { ?>
 									<option value="<?= $value->id_lokasi ?>" data-ongkir=<?= $value->ongkir ?> data-total=<?= $this->cart->total() +  $value->ongkir ?>><?= $value->nama_biaya ?></option>
 								<?php } ?>
-=======
-							<select name="pasang" id="pasang">
-								<option value="1">Pasang Ditempat (Biya tambahan Rp 5.000)</option>
-								<option value="2">Pasang Dirumah (Biya tambahan Rp 10.000)</option>
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 							</select>
 						</div>
 						<div class="col-md-12 form-group">
