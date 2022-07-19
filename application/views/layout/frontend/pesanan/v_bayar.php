@@ -18,38 +18,38 @@
 <section class="tracking_box_area section_gap">
 	<div class="container">
 		<div class="tracking_box_inner">
-<<<<<<< HEAD
+			<!-- <<<<<<< HEAD  -->
 			<p>Silahkan Upload Bukti Pembayaran anda</p>
-=======
-			<p>Silahkan Melakukan pembayaran ke norek dibawah ini dan Upload Bukti pembayaran anda</p>
-			<div class="card card-primary">
-				<div class="card-header">
-					<h3 class="card-title">No Rekening Liest Variasi</h3>
-				</div>
-				<div class="card-body">
-					<div class="form-group">
-						<table class="table">
-							<thead class="thead-primary">
-								<tr>
-									<th>Bank</th>
-									<th>No Rekening</th>
-									<th>Atas Nama</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php foreach ($rekening as $key => $value) { ?>
-									<tr>
-										<td><?= $value->nama_bank ?></td>
-										<td><?= $value->no_rek ?></td>
-										<td><?= $value->atas_nama ?></td>
-									</tr>
-								<?php } ?>
-							</tbody>
-						</table>
+			<!-- ======= -->
+			<!-- <p>Silahkan Melakukan pembayaran ke norek dibawah ini dan Upload Bukti pembayaran anda</p>
+				<div class="card card-primary">
+					<div class="card-header">
+						<h3 class="card-title">No Rekening Liest Variasi</h3>
 					</div>
-				</div>
-			</div><br><br><br>
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
+					<div class="card-body">
+						<div class="form-group">
+							<table class="table">
+								<thead class="thead-primary">
+									<tr>
+										<th>Bank</th>
+										<th>No Rekening</th>
+										<th>Atas Nama</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php foreach ($rekening as $key => $value) { ?>
+										<tr>
+											<td><?= $value->nama_bank ?></td>
+											<td><?= $value->no_rek ?></td>
+											<td><?= $value->atas_nama ?></td>
+										</tr>
+									<?php } ?>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div><br><br><br> -->
+			<!-- >>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab -->
 			<?php
 			//notifikasi form kosong
 			echo validation_errors('<div class="alert alert-warning alert-dismissible">
@@ -71,11 +71,7 @@
 				</div>
 				<div class="col-md-12 form-group">
 					<label for="">Jumlah Bayar</label>
-<<<<<<< HEAD
 					<input type="text" class="form-control" placeholder="Rp. <?= number_format($pesanan->total_bayar, 0) ?>.-" readonly>
-=======
-					<input type="text" class="form-control" placeholder="Rp. <?= number_format($pesanan->grand_total, 0) ?>.-" readonly>
->>>>>>> 8077a785a79405c4b348786fc56d20497e0571ab
 				</div>
 				<div class="col-md-12 form-group">
 					<label for="">Bukti Bayar</label>
