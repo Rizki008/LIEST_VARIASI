@@ -23,11 +23,11 @@
 					<div class="details_item">
 						<h4>Informasi Pesanan</h4>
 						<ul class="list">
-							<li><a href="#"><span>Name :</span> : <?= $value->nama ?></a></li>
-							<li><a href="#"><span>Order number</span> : <?= $value->no_order ?></a></li>
-							<li><a href="#"><span>Date</span> : <?= $value->alamat ?></a></li>
+							<li><a href="#"><span>Nama :</span> : <?= $value->nama ?></a></li>
+							<li><a href="#"><span>No Order</span> : <?= $value->no_order ?></a></li>
+							<li><a href="#"><span>Alamat</span> : <?= $value->alamat ?></a></li>
 							<li><a href="#"><span>Total</span> : Rp. <?= number_format($value->total_bayar, 0) ?></a></li>
-							<li><a href="#"><span>Payment method</span> : <?php if ($value->pembayaran == 1) { ?>
+							<li><a href="#"><span>Metode Pembayaran</span> : <?php if ($value->pembayaran == 1) { ?>
 										<span>Bayar Ditempat</span>
 									<?php } else { ?>
 										<span>Transfer</span>
