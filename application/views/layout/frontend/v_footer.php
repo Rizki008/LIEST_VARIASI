@@ -226,8 +226,24 @@
 		$(".total").html($(this).find(':selected').attr('data-total'));
 		$(".total").val($(this).find(':selected').attr('data-total'));
 
+		$(".price").html($(this).find(':selected').attr('data-price'));
+		$(".price").val($(this).find(':selected').attr('data-price'));
+
+		$(".diskon").html($(this).find(':selected').attr('data-diskon'));
+		$(".diskon").val($(this).find(':selected').attr('data-diskon'));
+
+		$(".size").html($(this).find(':selected').attr('data-size'));
+		$(".size").val($(this).find(':selected').attr('data-size'));
+
+		$(".stock").html($(this).find(':selected').attr('data-stock'));
+		$(".stock").val($(this).find(':selected').attr('data-stock'));
+
+		$(".price-view").html($(this).find(':selected').attr('data-price-view'));
+		$(".price-view").val($(this).find(':selected').attr('data-price-view'));
+
 	});
 </script>
+
 </body>
 
 </html>

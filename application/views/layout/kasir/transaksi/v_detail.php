@@ -11,6 +11,7 @@
 					<tr>
 						<th></th>
 						<th>Nama Produk</th>
+						<th>Warna Produk</th>
 						<th>Jumlah</th>
 						<th>Harga Satuan</th>
 					</tr>
@@ -21,6 +22,7 @@
 						<tr>
 							<td><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" width="150px"></td>
 							<td><?= $value->nama_produk ?></td>
+							<td><?= $value->warna ?></td>
 							<td><?= $value->qty ?></td>
 							<td>Rp. <?= number_format($value->harga, 0) ?></td>
 						</tr>

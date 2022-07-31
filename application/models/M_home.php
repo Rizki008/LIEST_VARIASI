@@ -24,14 +24,22 @@ class M_home extends CI_Model
 		return $this->db->get()->result();
 	}
 
-	public function detail_produk($id_produk)
-	{
-		$this->db->select('*');
-		$this->db->from('produk');
-		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
-		$this->db->where('id_produk', $id_produk);
+	// public function detail_produk($id_produk)
+	// {
+	// 	$this->db->select('*');
+	// 	$this->db->from('produk');
+	// 	$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
+	// 	$this->db->join('warna', 'produk.id_produk = warna.id_produk', 'left');
+	// 	$this->db->where('produk.id_produk', $id_produk);
 
-		return $this->db->get()->row();
+	// 	return $this->db->get()->row();
+	// }
+
+	public function detail_produk($id)
+	{
+		$produk['warna'] = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori=kategori.id_kategori JOIN warna ON produk.id_produk=warna.id_produk WHERE produk.id_produk='" . $id . "'")->result();
+		$produk['produk'] = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori=kategori.id_kategori JOIN warna ON produk.id_produk=warna.id_produk WHERE produk.id_produk='" . $id . "'")->row();
+		return $produk;
 	}
 
 	public function gambar_produk($id_produk)

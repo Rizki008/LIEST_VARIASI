@@ -24,6 +24,7 @@
 					<thead>
 						<tr>
 							<th scope="col">Produk</th>
+							<th scope="col">Warna</th>
 							<th scope="col">Harga</th>
 							<th scope="col">Quantity</th>
 							<th scope="col">Total Harga</th>
@@ -44,11 +45,16 @@
 								<td>
 									<div class="media">
 										<div class="d-flex">
-											<img src="<?= base_url('assets/gambar/' . $produk->gambar) ?>" width="200px">
+											<img src="<?= base_url('assets/gambar/' . $produk['produk']->gambar) ?>" width="200px">
 										</div>
 										<div class="media-body">
 											<p><?php echo $items['name'] ?></p>
 										</div>
+									</div>
+								</td>
+								<td>
+									<div class="media-body">
+										<p><?php echo $produk['produk']->warna ?></p>
 									</div>
 								</td>
 								<td>
@@ -90,8 +96,16 @@
 							</td>
 							<td>
 							</td>
+							<td>
+							</td>
+							<td>
+							</td>
 						</tr>
 						<tr>
+							<td>
+							</td>
+							<td>
+							</td>
 							<td>
 							</td>
 							<td>
@@ -104,6 +118,10 @@
 							</td>
 						</tr>
 						<tr class="out_button_area">
+							<td>
+							</td>
+							<td>
+							</td>
 							<td>
 							</td>
 							<td>

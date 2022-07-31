@@ -124,6 +124,52 @@ class M_produk extends CI_Model
 		$this->db->where('id_produk', $data['id_produk']);
 		$this->db->delete('produk', $data);
 	}
+
+	//menambahkan ke tabel warna
+	public function id_produk()
+	{
+		return $this->db->query('SELECT max(id_produk) as id FROM produk')->row();
+	}
+
+	//size data produk
+	public function warna($id)
+	{
+		$this->db->select('*');
+		$this->db->from('warna');
+		$this->db->join('produk', 'warna.id_produk = produk.id_produk', 'left');
+		$this->db->where('produk.id_produk', $id);
+		$data['warna'] = $this->db->get()->result();
+		$data['produk'] = $this->db->get_where('produk', array('id_produk' => $id))->row();
+		return $data;
+	}
+	public function add_warna($data)
+	{
+		$this->db->insert('warna', $data);
+	}
+	public function warna_detail($id)
+	{
+		$this->db->select('*');
+		$this->db->from('warna');
+		$this->db->join('produk', 'warna.id_produk = produk.id_produk', 'left');
+		$this->db->where('warna.id_warna', $id);
+		return $this->db->get()->row();
+	}
+	public function update_warna($id, $data)
+	{
+		$this->db->where('id_warna', $id);
+		$this->db->update('warna', $data);
+	}
+	public function delete_warna($id)
+	{
+		$this->db->where('id_warna', $id);
+		$this->db->delete('warna');
+	}
+	//jika produk di hapus maka semua data size di hapus
+	public function delete_warna_all($data)
+	{
+		$this->db->where('id_produk', $data['id_produk']);
+		$this->db->delete('warna');
+	}
 }
 
 /* End of file M_barang.php */

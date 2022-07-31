@@ -79,6 +79,14 @@ class Produk extends CI_Controller
 					'gambar' => $upload_data['uploads']['file_name'],
 				);
 				$this->m_produk->add($data);
+
+				$id = $this->m_produk->id_produk();
+				$i = $id->id;
+				$warna = array(
+					'id_produk' => $i,
+					'warna' => '0'
+				);
+				$this->m_produk->add_warna($warna);
 				$this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan !!!');
 				redirect('produk');
 			}
