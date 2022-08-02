@@ -6,7 +6,7 @@
 				<h1><?= $title ?></h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+					<!-- <a href="#">Shop<span class="lnr lnr-arrow-right"></span></a> -->
 					<a href="single-product.html"><?= $title ?></a>
 				</nav>
 			</div>
@@ -37,8 +37,8 @@
 					<h3><?= $produk['produk']->nama_produk ?></h3>
 					<h2>Rp. <?= number_format($produk['produk']->harga - $produk['produk']->diskon) ?></h2>
 					<ul class="list">
-						<li><a class="active" href="#"><span>Category</span> : <?= $produk['produk']->nama_kategori ?></a></li>
-						<li><a href="#"><span>Availibility</span> : <?= $produk['produk']->stock ?></a></li>
+						<li><a class="active" href="#"><span>Kategori</span> : <?= $produk['produk']->nama_kategori ?></a></li>
+						<li><a href="#"><span>Stok</span> : <?= $produk['produk']->stock ?></a></li>
 						<li><span>Warna Produk</span> :
 							<div class="col-md-4 form-group p_star">
 								<select name="id_lokasi" id="ongkir">
@@ -63,7 +63,7 @@
 						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $produk['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">
-						<button type="submit" class="primary-btn" data-name="<?= $produk['produk']->nama_produk ?>" data-price="<?= ($produk['produk']->diskon > 0) ? ($produk['produk']->harga - $produk['produk']->diskon) : $produk['produk']->harga ?>" data-id="<?= $produk['produk']->id_produk ?>">Add to Cart</button>
+						<button type="submit" class="primary-btn" data-name="<?= $produk['produk']->nama_produk ?>" data-price="<?= ($produk['produk']->diskon > 0) ? ($produk['produk']->harga - $produk['produk']->diskon) : $produk['produk']->harga ?>" data-id="<?= $produk['produk']->id_produk ?>">Tambah Ke Keranjang</button>
 					</div>
 					<?php echo form_close(); ?>
 				</div>

@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
-				<h1>Register</h1>
+				<h1>Registrasi</h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="category.html">Register</a>
+					<a href="category.html">Registrasi</a>
 				</nav>
 			</div>
 		</div>
@@ -22,8 +22,8 @@
 				<div class="login_box_img">
 					<img class="img-fluid" src="<?= base_url() ?>karma-master/img/login.jpg" alt="">
 					<div class="hover">
-						<h4>Login</h4>
-						<a class="primary-btn" href="<?= base_url('pelanggan/login') ?>">Log In</a>
+						<h4>Masuk</h4>
+						<a class="primary-btn" href="<?= base_url('pelanggan/login') ?>">Masuk</a>
 					</div>
 				</div>
 			</div>

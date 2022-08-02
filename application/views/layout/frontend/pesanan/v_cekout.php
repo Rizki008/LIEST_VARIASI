@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
-				<h1>Checkout</h1>
+				<h1>Beli</h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="single-product.html">Checkout</a>
+					<a href="single-product.html">Beli</a>
 				</nav>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 			$no_order = date('Ymd') . strtoupper(random_string('alnum', 9)); ?>
 			<div class="row">
 				<div class="col-lg-8">
-					<h3>Cekout Pesanan</h3>
+					<h3>Beli Pesanan</h3>
 					<form class="row contact_form" action="<?= base_url('belanja/cekout') ?>" method="post" novalidate="novalidate">
 						<div class="col-md-6 form-group p_star">
 							<label for="">Nama Pemesan</label>
@@ -102,7 +102,7 @@
 							echo form_hidden('qty' . $i++, $items['qty']);
 						}
 						?>
-						<button type="submit" class="primary-btn">cekout</button>
+						<button type="submit" class="primary-btn">Beli</button>
 					</div>
 				</div>
 			</div>

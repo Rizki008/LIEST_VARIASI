@@ -53,9 +53,9 @@
 							<td><?= $value->deskripsi ?></td>
 							<td><img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" width="150px"></td>
 							<td>
-								<a href="<?= base_url('warna/warna_produk/' . $value->id_produk) ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i>Edit Warna</a>
-								<a href="<?= base_url('produk/edit/' . $value->id_produk) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i>Edit Produk</a>
-								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value->id_produk ?>"><i class="fa fa-trash"></i>Delete</button>
+								<a href="<?= base_url('warna/warna_produk/' . $value->id_produk) ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-alt"></i></a>
+								<a href="<?= base_url('produk/edit/' . $value->id_produk) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value->id_produk ?>"><i class="fa fa-trash"></i></button>
 							</td>
 						</tr>
 

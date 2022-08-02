@@ -13,7 +13,7 @@
 									<p><?= $value->deskripsi ?></p>
 									<div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Add to Bag</span>
+										<span class="add-text text-uppercase">Tambah Ke Keranjang</span>
 									</div>
 								</div>
 							</div>
@@ -108,12 +108,12 @@
 
 										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
+											<p class="hover-text">Tambah Ke keranjang</p>
 										</button>
 
 										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info btn-small">
 											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<p class="hover-text">Lihat Detail</p>
 										</a>
 									</div>
 								</div>
@@ -164,12 +164,12 @@
 
 										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
+											<p class="hover-text">Tambah Ke keranjang</p>
 										</button>
 
 										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info">
 											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<p class="hover-text">Lihat Detail</p>
 										</a>
 									</div>
 								</div>

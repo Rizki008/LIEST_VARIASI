@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
-				<h1>Login</h1>
+				<h1>Masuk</h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="category.html">Login</a>
+					<a href="category.html">Masuk</a>
 				</nav>
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 							<input type="password" class="form-control" value="<?= set_value('password') ?>" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
 						</div>
 						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" class="primary-btn">Log In</button>
+							<button type="submit" value="submit" class="primary-btn">Masuk</button>
 						</div>
 					</form>
 				</div>

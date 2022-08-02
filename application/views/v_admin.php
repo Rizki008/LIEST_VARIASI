@@ -192,7 +192,7 @@
 					<?php
 					foreach ($grafik_pelanggan as $key => $value) {
 						$nama[] = $value->nama;
-						$jml[] = $value->jml;
+						$jml[] = $value->qty;
 					}
 					?>
 					<canvas id="myChartsa" height="100" style="height: 100px;"></canvas>
@@ -205,7 +205,7 @@
 								labels: <?= json_encode($nama) ?>,
 								datasets: [{
 									label: 'Grafik Analisis Pelanggan',
-									data: <?= json_encode($jml) ?>,
+									data: <?= json_encode($qty) ?>,
 									backgroundColor: [
 										'rgba(255, 99, 132, 0.80)',
 										'rgba(54, 162, 235, 0.80)',

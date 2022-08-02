@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="<?= base_url() ?>"><b>LIETS</b>VARIASI</a>
+			<a href="<?= base_url() ?>"><b>LIEST</b>VARIASI</a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="card">
