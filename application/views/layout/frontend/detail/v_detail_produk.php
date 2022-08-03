@@ -18,6 +18,20 @@
 <!--================Single Product Area =================-->
 <div class="product_image_area">
 	<div class="container">
+		<?php echo form_open('belanja/add');
+		// echo form_hidden('id', $produk['produk']->id_produk);
+		// echo form_hidden('price', $produk['produk']->harga - $produk['produk']->diskon);
+		// echo form_hidden('name', $produk['produk']->nama_produk);
+		// echo form_hidden('warna', $produk['produk']->warna);
+		echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
+		?>
+		<input type="hidden" name="id" value="<?= $produk['produk']->id_produk ?>">
+		<input type="hidden" class="price" name="price" value="<?= $produk['produk']->harga - ($produk['produk']->diskon / 100 * $produk['produk']->harga) ?>">
+		<input type="hidden" name="name" value="<?= $produk['produk']->nama_produk ?>">
+		<input type="hidden" name="qty" value="1">
+		<input type="hidden" class="warna" name="warna" value="<?= $produk['produk']->warna ?>">
+		<input type="hidden" class="stock" name="stock" value="<?= $produk['produk']->stock ?>">
+		<input type="hidden" name="images" value="<?= $produk['produk']->gambar ?>">
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
 				<div class="s_Product_carousel">
@@ -32,6 +46,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
 					<h3><?= $produk['produk']->nama_produk ?></h3>
@@ -51,24 +66,18 @@
 						</li>
 					</ul>
 					<p><?= $produk['produk']->deskripsi ?></p>
-					<?php echo form_open('belanja/add');
-					echo form_hidden('id', $produk['produk']->id_produk);
-					echo form_hidden('price', $produk['produk']->harga - $produk['produk']->diskon);
-					echo form_hidden('name', $produk['produk']->nama_produk);
-					echo form_hidden('warna', $produk['produk']->warna);
-					echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
-					?>
 					<div class="product_count">
 						<label for="qty">Quantity:</label>
 						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $produk['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">
-						<button type="submit" class="primary-btn" data-name="<?= $produk['produk']->nama_produk ?>" data-price="<?= ($produk['produk']->diskon > 0) ? ($produk['produk']->harga - $produk['produk']->diskon) : $produk['produk']->harga ?>" data-id="<?= $produk['produk']->id_produk ?>">Tambah Ke Keranjang</button>
+						<button type="submit" class="primary-btn" data-name="<?= $produk['produk']->nama_produk ?>" data-warna="<?= $produk['produk']->warna ?>" data-price="<?= ($produk['produk']->diskon > 0) ? ($produk['produk']->harga - $produk['produk']->diskon) : $produk['produk']->harga ?>" data-id="<?= $produk['produk']->id_produk ?>">Tambah Ke Keranjang</button>
 					</div>
-					<?php echo form_close(); ?>
 				</div>
 			</div>
+
 		</div>
+		<?php echo form_close(); ?>
 	</div>
 </div>
 <!--================End Single Product Area =================-->
