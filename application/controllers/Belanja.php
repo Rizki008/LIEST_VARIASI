@@ -28,11 +28,13 @@ class Belanja extends CI_Controller
 		$this->pelanggan_login->proteksi_halaman();
 		$redirect_page =  $this->input->post('redirect_page');
 		$data = array(
-			'id'      => $this->input->post('id'),
-			'qty'     => $this->input->post('qty'),
-			'warna'     => $this->input->post('warna'),
-			'price'   => $this->input->post('price'),
-			'name'    => $this->input->post('name'),
+			'id' => $this->input->post('id'),
+			'qty' => $this->input->post('qty'),
+			'warna' => $this->input->post('warna'),
+			'price' => $this->input->post('price'),
+			'name' => $this->input->post('name'),
+			'images' => $this->input->post('images'),
+			'stock' => $this->input->post('stock')
 		);
 
 		$this->cart->insert($data);
