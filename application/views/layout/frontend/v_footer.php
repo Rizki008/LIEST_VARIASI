@@ -232,8 +232,8 @@
 		$(".diskon").html($(this).find(':selected').attr('data-diskon'));
 		$(".diskon").val($(this).find(':selected').attr('data-diskon'));
 
-		$(".size").html($(this).find(':selected').attr('data-size'));
-		$(".size").val($(this).find(':selected').attr('data-size'));
+		$(".warna").html($(this).find(':selected').attr('data-warna'));
+		$(".warna").val($(this).find(':selected').attr('data-warna'));
 
 		$(".stock").html($(this).find(':selected').attr('data-stock'));
 		$(".stock").val($(this).find(':selected').attr('data-stock'));
