@@ -54,7 +54,7 @@
 								</td>
 								<td>
 									<div class="media-body">
-										<p><?php echo $produk['produk']->warna ?></p>
+										<p><?php echo $items['warna'] ?></p>
 									</div>
 								</td>
 								<td>
