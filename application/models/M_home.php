@@ -10,8 +10,10 @@ class M_home extends CI_Model
 		$this->db->select('*');
 		$this->db->from('produk');
 		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
+		$this->db->join('warna', 'warna.id_produk = produk.id_produk', 'left');
 		$this->db->where('stock>=1');
-		$this->db->order_by('id_produk', 'desc');
+		$this->db->order_by('produk.id_produk', 'desc');
+		$this->db->group_by('produk.id_produk');
 		$this->db->limit(20);
 		return $this->db->get()->result();
 	}
@@ -37,9 +39,9 @@ class M_home extends CI_Model
 
 	public function detail_produk($id)
 	{
-		$produk['warna'] = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori=kategori.id_kategori JOIN warna ON produk.id_produk=warna.id_produk WHERE produk.id_produk='" . $id . "'")->result();
-		$produk['produk'] = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori=kategori.id_kategori JOIN warna ON produk.id_produk=warna.id_produk WHERE produk.id_produk='" . $id . "'")->row();
-		return $produk;
+		$data['warna'] = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori=kategori.id_kategori JOIN warna ON produk.id_produk=warna.id_produk WHERE produk.id_produk='" . $id . "'")->result();
+		$data['produk'] = $this->db->query("SELECT * FROM produk JOIN kategori ON produk.id_kategori=kategori.id_kategori JOIN warna ON produk.id_produk=warna.id_produk WHERE produk.id_produk='" . $id . "'")->row();
+		return $data;
 	}
 
 	public function gambar_produk($id_produk)
