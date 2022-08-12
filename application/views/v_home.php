@@ -86,7 +86,7 @@
 						<div class="col-lg-3 col-md-6">
 							<?php
 							echo form_open('belanja/add');
-							echo form_hidden('id', $value->id_produk);
+							echo form_hidden('id', $value->id_warna);
 							echo form_hidden('qty', 1);
 							echo form_hidden('price', $value->harga - $value->diskon);
 							echo form_hidden('name', $value->nama_produk);
