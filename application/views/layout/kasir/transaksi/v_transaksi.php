@@ -82,6 +82,7 @@
 							<th>No Order</th>
 							<th>Tanggal Order</th>
 							<th>Total Bayar</th>
+							<th>Action</th>
 						</tr>
 						<?php foreach ($pesanan_diproses as $key => $value) { ?>
 							<tr>
@@ -93,6 +94,9 @@
 
 									<span class="badge badge-primary">Dikemas</span>
 
+								</td>
+								<td>
+									<a href="<?= base_url('kasir/detail/' . $value->no_order) ?>" class="btn btn-warning"><i class="fa fa-send" aria-hidden="true"></i>Detail</a>
 								</td>
 							</tr>
 						<?php } ?>
