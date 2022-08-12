@@ -115,14 +115,16 @@ class M_transaksi extends CI_Model
 	//detail pesanan selesai
 	public function pesanan_detail($no_order)
 	{
-		$this->db->select('*');
-		$this->db->from('transaksi');
-		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
-		$this->db->join('rinci_transaksi', 'transaksi.no_order = rinci_transaksi.no_order', 'left');
-		$this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
-		$this->db->join('warna', 'produk.id_produk = warna.id_produk', 'left');
-		$this->db->where('transaksi.no_order', $no_order);
-		return $this->db->get()->result();
+		// $this->db->select('*');
+		// $this->db->from('transaksi');
+		// $this->db->join('rinci_transaksi', 'transaksi.no_order = rinci_transaksi.no_order', 'left');
+		// $this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+		// // $this->db->join('warna', 'produk.id_produk = warna.id_produk', 'left');
+		// $this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		// $this->db->where('transaksi.no_order', $no_order);
+		// return $this->db->get()->result();
+
+		return $this->db->query("SELECT * FROM `transaksi` JOIN rinci_transaksi ON transaksi.no_order=rinci_transaksi.no_order JOIN warna ON rinci_transaksi.id_warna=warna.id_warna JOIN produk ON warna.id_produk=produk.id_produk JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan WHERE transaksi.no_order='" . $no_order . "'")->result();
 	}
 
 	public function insert_riview()
@@ -155,8 +157,9 @@ class M_transaksi extends CI_Model
 		$this->db->select('produk.nama_produk');
 		//$this->db->select('rinci_transaksi.qty');
 		$this->db->from('rinci_transaksi');
-		$this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
-		$this->db->group_by('rinci_transaksi.id_produk');
+		$this->db->join('warna', 'rinci_transaksi.id_warna = warna.id_warna', 'left');
+		$this->db->join('produk', 'warna.id_produk = produk.id_produk', 'left');
+		$this->db->group_by('rinci_transaksi.id_warna');
 		$this->db->order_by('qty', 'desc');
 		return $this->db->get()->result();
 	}
@@ -169,7 +172,8 @@ class M_transaksi extends CI_Model
 		$this->db->select('pelanggan.nama');
 		$this->db->select('rinci_transaksi.qty');
 		$this->db->from('rinci_transaksi');
-		$this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+		$this->db->join('warna', 'rinci_transaksi.id_warna = warna.id_warna', 'left');
+		$this->db->join('produk', 'warna.id_produk = produk.id_produk', 'left');
 		$this->db->join('transaksi', 'rinci_transaksi.no_order = transaksi.no_order', 'left');
 		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
 		$this->db->group_by('pelanggan.id_pelanggan');
