@@ -42,11 +42,11 @@ class Home extends CI_Controller
 
 
 
-	public function detail_produk($id)
+	public function detail_produk($id = null)
 	{
 		$data = array(
 			'title' => 'Detail Produk',
-			'produk' => $this->m_home->detail_produk($id),
+			'data' => $this->m_home->detail_produk($id),
 			'related_products' => $this->m_home->related_products($id),
 			'reviews' => $this->m_home->reviews($id),
 			'isi' => 'layout/frontend/detail/v_detail_produk'
