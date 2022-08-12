@@ -33,22 +33,20 @@
 					</thead>
 					<tbody>
 						<?php $i = 1; ?>
-
 						<?php $total_berat = 0;
 						$total = 0;
 						foreach ($this->cart->contents() as $items) {
-							$produk = $this->m_home->detail_produk($items['id']);
-							// $berat = $items['qty'] * $produk->berat;
-							// $total_berat =  $total_berat + $berat;
-						?>
+							// $produk = $this->m_home->detail_produk($items['id']);
+							$berat = $items['qty'];
+							$total_berat = $total_berat + $berat ?>
 							<tr>
 								<td>
 									<div class="media">
 										<div class="d-flex">
-											<img src="<?= base_url('assets/gambar/' . $produk['produk']->gambar) ?>" width="200px">
+											<img src="<?php echo base_url('assets/gambar/' . $items['images']) ?>" alt="" width="70px">
 										</div>
 										<div class="media-body">
-											<p><?php echo $items['name'] ?></p>
+											<h6><?php echo $items['name'] ?></h6>
 										</div>
 									</div>
 								</td>
@@ -58,7 +56,7 @@
 									</div>
 								</td>
 								<td>
-									<h5>Rp. <?= number_format($items['price']) ?></h5>
+									<h5>Rp. <?= number_format($items['price'], 0); ?></h5>
 								</td>
 								<td>
 									<div class="product_count">
@@ -77,11 +75,11 @@
 									</div>
 								</td>
 								<td class="total">
-									Rp. <?= number_format($items['subtotal']); ?>
+									Rp. <?= number_format($items['subtotal'], 0); ?>
 								</td>
 								<td>
 									<!-- <input type="checkbox" name="nama_produk[]" checked="checked" value="<?php echo $items['name'] ?>"> -->
-									<a href="<?= base_url('belanja/delete/' . $items['rowid']) ?>" class="remove-item badge-danger"><i class="fa fa-trash-o"></i></a>
+									<a href="<?= base_url('belanja/delete/') . $items['rowid'] ?>" class="remove-item badge-danger"><i class="fa fa-trash-o"></i></a>
 								</td>
 							</tr>
 							<?php $i++; ?>
