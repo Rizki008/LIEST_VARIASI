@@ -18,66 +18,62 @@
 <!--================Single Product Area =================-->
 <div class="product_image_area">
 	<div class="container">
-		<?php echo form_open('belanja/add');
-		// echo form_hidden('id', $produk['produk']->id_produk);
-		// echo form_hidden('price', $produk['produk']->harga - $produk['produk']->diskon);
-		// echo form_hidden('name', $produk['produk']->nama_produk);
-		// echo form_hidden('warna', $produk['produk']->warna);
+		<?php
+		echo form_open('belanja/add');
 		echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 		?>
-		<input type="hidden" name="id" value="<?= $produk['produk']->id_produk ?>">
-		<input type="hidden" class="price" name="price" value="<?= $produk['produk']->harga - ($produk['produk']->diskon / 100 * $produk['produk']->harga) ?>">
-		<input type="hidden" name="name" value="<?= $produk['produk']->nama_produk ?>">
+		<input type="hidden" name="id" value="<?= $data['produk']->id_produk ?>">
+		<input type="hidden" class="price" name="price" value="<?= $data['produk']->harga - ($data['produk']->diskon / 100 * $data['produk']->harga) ?>">
+		<input type="hidden" name="name" value="<?= $data['produk']->nama_produk ?>">
 		<input type="hidden" name="qty" value="1">
-		<input type="hidden" class="warna" name="warna" value="<?= $produk['produk']->warna ?>">
-		<input type="hidden" class="stock" name="stock" value="<?= $produk['produk']->stock ?>">
-		<input type="hidden" name="images" value="<?= $produk['produk']->gambar ?>">
+		<input type="hidden" class="warna" name="warna" value="<?= $data['produk']->warna ?>">
+		<input type="hidden" class="stock" name="stock" value="<?= $data['produk']->stock ?>">
+		<input type="hidden" name="images" value="<?= $data['produk']->gambar ?>">
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
 				<div class="s_Product_carousel">
 					<div class="single-prd-item">
-						<img class="img-fluid" src="<?= base_url('assets/gambar/' . $produk['produk']->gambar) ?>" alt="">
+						<img class="img-fluid" src="<?= base_url('assets/gambar/' . $data['produk']->gambar) ?>" alt="">
 					</div>
 					<div class="single-prd-item">
-						<img class="img-fluid" src="<?= base_url('assets/gambar/' . $produk['produk']->gambar) ?>" alt="">
+						<img class="img-fluid" src="<?= base_url('assets/gambar/' . $data['produk']->gambar) ?>" alt="">
 					</div>
 					<div class="single-prd-item">
-						<img class="img-fluid" src="<?= base_url('assets/gambar/' . $produk['produk']->gambar) ?>" alt="">
+						<img class="img-fluid" src="<?= base_url('assets/gambar/' . $data['produk']->gambar) ?>" alt="">
 					</div>
 				</div>
 			</div>
 
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
-					<h3><?= $produk['produk']->nama_produk ?></h3>
-					<h2>Rp. <?= number_format($produk['produk']->harga - $produk['produk']->diskon) ?></h2>
+					<h3><?= $data['produk']->nama_produk ?></h3>
+					<h2>Rp. <?= number_format($data['produk']->harga - $data['produk']->diskon) ?></h2>
 					<ul class="list">
-						<li><a class="active" href="#"><span>Kategori</span> : <?= $produk['produk']->nama_kategori ?></a></li>
-						<li><a href="#"><span>Stok</span> : <?= $produk['produk']->stock ?></a></li>
+						<li><a class="active" href="#"><span>Kategori</span> : <?= $data['produk']->nama_kategori ?></a></li>
+						<li><a href="#"><span>Stok</span> : <?= $data['produk']->stock ?></a></li>
 						<li><span>Warna Produk</span> :
 							<div class="col-md-4 form-group p_star">
-								<select name="id_lokasi" id="ongkir">
+								<select name="id" id="produk">
 									<option value="">--Pilih Warna--</option>
-									<?php foreach ($produk['warna'] as $key => $value) { ?>
+									<?php foreach ($data['warna'] as $key => $value) { ?>
 										<option data-stock="<?= $value->stock ?>" data-warna="<?= $value->warna ?>" data-diskon="Rp. <?= number_format($value->harga, 0) ?>" data-price-view="Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0) ?>" data-price="<?= $value->harga - ($value->diskon / 100 * $value->harga) ?>" value="<?= $value->id_warna ?>"><?= $value->warna ?></option>
 									<?php } ?>
 								</select>
 							</div>
 						</li>
 					</ul>
-					<p><?= $produk['produk']->deskripsi ?></p>
+					<p><?= $data['produk']->deskripsi ?></p>
 					<div class="product_count">
 						<label for="qty">Quantity:</label>
-						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $produk['produk']->stock ?>">
+						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $data['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">
-						<button type="submit" class="primary-btn" data-name="<?= $produk['produk']->nama_produk ?>" data-warna="<?= $produk['produk']->warna ?>" data-price="<?= ($produk['produk']->diskon > 0) ? ($produk['produk']->harga - $produk['produk']->diskon) : $produk['produk']->harga ?>" data-id="<?= $produk['produk']->id_produk ?>">Tambah Ke Keranjang</button>
+						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_produk ?>" class="primary-btn">Tambah Ke keranjang</button>
 					</div>
+					<?php echo form_close(); ?>
 				</div>
 			</div>
-
 		</div>
-		<?php echo form_close(); ?>
 	</div>
 </div>
 <!--================End Single Product Area =================-->
