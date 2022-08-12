@@ -25,8 +25,7 @@ class Belanja extends CI_Controller
 
 	public function add()
 	{
-		$this->pelanggan_login->proteksi_halaman();
-		$redirect_page =  $this->input->post('redirect_page');
+		$redirect_page = $this->input->post('redirect_page');
 		$data = array(
 			'id' => $this->input->post('id'),
 			'qty' => $this->input->post('qty'),
@@ -36,9 +35,8 @@ class Belanja extends CI_Controller
 			'images' => $this->input->post('images'),
 			'stock' => $this->input->post('stock')
 		);
-
 		$this->cart->insert($data);
-		redirect($redirect_page, 'refresh');
+		redirect($redirect_page);
 	}
 
 	public function delete($rowid)
@@ -109,13 +107,12 @@ class Belanja extends CI_Controller
 			foreach ($this->cart->contents() as $item) {
 				$data_rinci = array(
 					'no_order' => $this->input->post('no_order'),
-					'id_produk' => $item['id'],
+					'id_warna' => $item['id'],
 					'qty' => $this->input->post('qty' . $i++),
 				);
-
 				$this->m_transaksi->simpan_rinci_transaksi($data_rinci);
 			}
-			$this->session->set_flashdata('pesan', 'Pesanan Berhasil Diproses');
+			$this->session->set_flashdata('pesan', 'Pesanan Diproses');
 			$this->cart->destroy();
 			redirect('pesanan_saya');
 		}
