@@ -70,7 +70,8 @@ class M_pesanan_masuk extends CI_Model
 		$this->db->select('*');
 		$this->db->from('transaksi');
 		$this->db->join('rinci_transaksi', 'transaksi.no_order = rinci_transaksi.no_order', 'left');
-		$this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+		$this->db->join('warna', 'rinci_transaksi.id_warna = warna.id_warna', 'left');
+		$this->db->join('produk', 'warna.id_produk = produk.id_produk', 'left');
 		return $this->db->get()->row();
 	}
 
