@@ -60,7 +60,7 @@
 										</div>
 										<div class="prd-bottom">
 
-											<button type="submit" class="btn social-info" data-name="<?= $value->nama_produk ?>" data-price="<?= $value->harga ?>" data-id="<?= $value->id_produk ?>">
+											<button type="submit" class="btn social-info swalDefaultSuccess" data-name="<?= $value->nama_produk ?>" data-price="<?= $value->harga ?>" data-id="<?= $value->id_produk ?>">
 												<span class="ti-bag"></span>
 												<p class="hover-text">add to bag</p>
 											</button>

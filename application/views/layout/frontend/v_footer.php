@@ -244,6 +244,26 @@
 	});
 </script>
 
+<script src="<?= base_url() ?>template/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		const Toast = Swal.mixin({
+			toast: true,
+			position: 'top-end',
+			showConfirmButton: false,
+			timer: 3000
+		});
+
+		$('.swalDefaultSuccess').click(function() {
+			Toast.fire({
+				icon: 'success',
+				title: 'Produk Berhasil Ditambahkan Kekeranjang.'
+			})
+		});
+	});
+</script>
+
 </body>
 
 </html>

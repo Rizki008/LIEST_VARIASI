@@ -132,7 +132,7 @@ class M_transaksi extends CI_Model
 		$data = array(
 			'id_pelanggan' => $this->session->userdata('id_pelanggan'),
 			'id_produk' => $this->input->post('id_produk'),
-			'nama_pelanggan' => $this->session->userdata('nama_pelanggan'),
+			'ranting' => $this->input->post('ranting'),
 			'tanggal' => date('Y-m-d'),
 			'isi' => $this->input->post('isi'),
 			'status' => 1,
@@ -145,6 +145,8 @@ class M_transaksi extends CI_Model
 		$this->db->select('*');
 		$this->db->from('transaksi');
 		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->group_by('pelanggan.id_pelanggan');
+
 		$this->db->where('no_order', $no_order);
 		return $this->db->get()->result();
 	}

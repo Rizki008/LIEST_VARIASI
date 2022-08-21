@@ -30,4 +30,5 @@
 	<link rel="stylesheet" href="<?= base_url() ?>karma-master/css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="<?= base_url() ?>karma-master/css/magnific-popup.css">
 	<link rel="stylesheet" href="<?= base_url() ?>karma-master/css/main.css">
+	<link rel="stylesheet" href="<?= base_url() ?>template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 </head>

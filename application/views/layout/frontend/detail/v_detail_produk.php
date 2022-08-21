@@ -68,7 +68,7 @@
 						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $data['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">
-						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_produk ?>" class="primary-btn">Tambah Ke keranjang</button>
+						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_produk ?>" class="primary-btn swalDefaultSuccess">Tambah Ke keranjang</button>
 					</div>
 					<?php echo form_close(); ?>
 				</div>
