@@ -25,7 +25,7 @@
 						<th>Nama Produk</th>
 						<th>Kategori</th>
 						<th>Harga</th>
-						<th>Diskon</th>
+						<th>Besar Diskon</th>
 						<th>Stock</th>
 						<th>Deskripsi</th>
 						<th>Gambar</th>
@@ -40,7 +40,7 @@
 							<td><?= $value->nama_produk ?></td>
 							<td><?= $value->nama_kategori ?></td>
 							<td>Rp. <?= number_format($value->harga, 0) ?></td>
-							<td>Rp. <?= number_format($value->diskon, 0) ?></td>
+							<td><?= number_format($value->diskon, 0) ?>%</td>
 							<td>
 								<?php if ($value->stock <= 50) { ?>
 									<span class="badge bg-danger"><?= $value->stock ?></span>

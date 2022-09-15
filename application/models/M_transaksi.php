@@ -145,6 +145,8 @@ class M_transaksi extends CI_Model
 		$this->db->select('*');
 		$this->db->from('transaksi');
 		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->group_by('pelanggan.id_pelanggan');
+
 		$this->db->where('no_order', $no_order);
 		return $this->db->get()->result();
 	}

@@ -107,6 +107,7 @@ class Belanja extends CI_Controller
 			foreach ($this->cart->contents() as $item) {
 				$data_rinci = array(
 					'no_order' => $this->input->post('no_order'),
+					'id_produk' => $item['id'],
 					'id_warna' => $item['id'],
 					'qty' => $this->input->post('qty' . $i++),
 				);

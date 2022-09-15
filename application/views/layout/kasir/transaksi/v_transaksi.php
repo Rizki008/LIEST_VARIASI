@@ -58,7 +58,7 @@
 										<span class="badge badge-primary">Menunggu Verifikasi</span>
 									<?php }
 									if ($value->pembayaran == 1) { ?>
-										<span class="badge badge-warning">Bayar Ditampat</span>
+										<span class="badge badge-warning">Bayar Ditempat</span>
 									<?php } ?>
 								</td>
 								<td>
