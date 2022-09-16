@@ -22,7 +22,8 @@
 		echo form_open('belanja/add');
 		echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 		?>
-		<input type="hidden" name="id" value="<?= $data['produk']->id_produk ?>">
+		<input type="hidden" name="id" value="<?= $data['produk']->id_warna ?>">
+		<input type="hidden" name="id_produk" value="<?= $data['produk']->id_produk ?>">
 		<input type="hidden" class="price" name="price" value="<?= $data['produk']->harga - ($data['produk']->diskon / 100 * $data['produk']->harga) ?>">
 		<input type="hidden" name="name" value="<?= $data['produk']->nama_produk ?>">
 		<input type="hidden" name="qty" value="1">
@@ -69,7 +70,7 @@
 						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $data['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">
-						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_produk ?>" class="primary-btn swalDefaultSuccess">Tambah Ke keranjang</button>
+						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_warna ?>" data-id="<?= $data['produk']->id_produk ?>" class="primary-btn swalDefaultSuccess">Tambah Ke keranjang</button>
 					</div>
 					<?php echo form_close(); ?>
 				</div>

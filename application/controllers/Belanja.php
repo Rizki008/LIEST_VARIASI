@@ -28,6 +28,7 @@ class Belanja extends CI_Controller
 		$redirect_page = $this->input->post('redirect_page');
 		$data = array(
 			'id' => $this->input->post('id'),
+			'id_produk' => $this->input->post('id_produk'),
 			'qty' => $this->input->post('qty'),
 			'warna' => $this->input->post('warna'),
 			'price' => $this->input->post('price'),
@@ -107,8 +108,8 @@ class Belanja extends CI_Controller
 			foreach ($this->cart->contents() as $item) {
 				$data_rinci = array(
 					'no_order' => $this->input->post('no_order'),
-					'id_produk' => $item['id'],
 					'id_warna' => $item['id'],
+					'id_produk' => $item['id_produk'],
 					'qty' => $this->input->post('qty' . $i++),
 				);
 				$this->m_transaksi->simpan_rinci_transaksi($data_rinci);

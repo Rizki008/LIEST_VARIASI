@@ -87,6 +87,7 @@
 							<?php
 							echo form_open('belanja/add');
 							echo form_hidden('id', $value->id_warna);
+							echo form_hidden('id_produk', $value->id_produk);
 							echo form_hidden('qty', 1);
 							echo form_hidden('price', $value->harga - ($value->diskon / 100 * $value->harga));
 							echo form_hidden('name', $value->nama_produk);
@@ -106,7 +107,7 @@
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info btn-small" data-images="<?= $value->gambar ?>" data-warna="<?= $value->warna ?>" data-stock="<?= $value->stock ?>" data-name="<?= $value->nama_produk ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk ?>">
+										<button type="submit" class="btn social-info btn-small" data-images="<?= $value->gambar ?>" data-warna="<?= $value->warna ?>" data-stock="<?= $value->stock ?>" data-name="<?= $value->nama_produk ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_warna ?>" data-id_produk="<?= $value->id_produk ?>">
 
 											<!-- <button type="submit" class="btn social-info btn-small swalDefaultSuccess" data-images="<?= $value->gambar ?>" data-warna="<?= $value->warna ?>" data-stock="<?= $value->stock ?>" data-name="<?= $value->nama_produk ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk ?>"> -->
 
