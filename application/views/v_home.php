@@ -107,6 +107,9 @@
 									<div class="prd-bottom">
 
 										<button type="submit" class="btn social-info btn-small" data-images="<?= $value->gambar ?>" data-warna="<?= $value->warna ?>" data-stock="<?= $value->stock ?>" data-name="<?= $value->nama_produk ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk ?>">
+
+											<!-- <button type="submit" class="btn social-info btn-small swalDefaultSuccess" data-images="<?= $value->gambar ?>" data-warna="<?= $value->warna ?>" data-stock="<?= $value->stock ?>" data-name="<?= $value->nama_produk ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk ?>"> -->
+
 											<span class="ti-bag"></span>
 											<p class="hover-text">Tambah Ke keranjang</p>
 										</button>
@@ -162,7 +165,7 @@
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
+										<button type="submit" class="btn social-info btn-small swalDefaultSuccess" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
 											<span class="ti-bag"></span>
 											<p class="hover-text">Tambah Ke keranjang</p>
 										</button>

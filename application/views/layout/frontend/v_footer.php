@@ -243,7 +243,6 @@
 
 	});
 </script>
-
 <script>
 	console.log = function() {}
 	$("#warna").on('change', function() {
@@ -258,7 +257,6 @@
 		$(".price").val($(this).find(':selected').attr('data-price'));
 	});
 </script>
-
 </body>
 
 </html>
