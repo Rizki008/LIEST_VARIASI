@@ -41,7 +41,7 @@ $daftar_chat = $this->m_chatting->daftar_chat();
 									</div>
 								</div>
 								<a href="<?= base_url('chatting_admin/pesan/' . $value->id_pelanggan) ?>">
-									Message End <button type="button" class="btn btn-block btn-outline-primary btn-sm">VIEW CHAT</button>
+									Message End <button type="button" class="btn btn-block btn-outline-primary btn-sm">Lihat Pesan</button>
 								</a>
 							</a>
 							<div class="dropdown-divider"></div>

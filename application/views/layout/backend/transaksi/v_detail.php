@@ -74,7 +74,7 @@
 					<tr>
 						<th>Total Bayar</th>
 						<th>Status</th>
-						<th>Action</th>
+						<th>Aksi</th>
 					</tr>
 				</thead>
 				<tbody>

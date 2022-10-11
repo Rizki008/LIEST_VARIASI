@@ -43,7 +43,7 @@ class User_login
     public function proteksi_halaman()
     {
         if ($this->ci->session->userdata('username') == '') {
-            $this->ci->session->set_flashdata('error', 'Anda Belum Login');
+            $this->ci->session->set_flashdata('error', 'Anda Belum Masuk');
             redirect('auth/login_user');
         }
     }
@@ -53,7 +53,7 @@ class User_login
         $this->ci->session->unset_userdata('username');
         $this->ci->session->unset_userdata('nama_user');
         $this->ci->session->unset_userdata('level_user');
-        $this->ci->session->set_flashdata('pesan', 'Berhasil LogOut!!!!');
+        $this->ci->session->set_flashdata('pesan', 'Berhasil Keluar!!!!');
         redirect('auth/login_user');
     }
 }

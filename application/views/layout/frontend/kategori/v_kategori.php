@@ -67,7 +67,7 @@
 											</button>
 											<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="btn social-info">
 												<span class="lnr lnr-move"></span>
-												<p class="hover-text">view more</p>
+												<p class="hover-text">Lihat Detail</p>
 											</a>
 										</div>
 									</div>

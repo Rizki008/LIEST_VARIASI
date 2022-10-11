@@ -66,7 +66,7 @@
 					</ul>
 					<p><?= $data['produk']->deskripsi ?></p>
 					<div class="product_count">
-						<label for="qty">Quantity:</label>
+						<label for="qty">Jumlah:</label>
 						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $data['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">

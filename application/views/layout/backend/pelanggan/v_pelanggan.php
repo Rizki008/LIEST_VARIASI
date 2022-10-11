@@ -29,7 +29,7 @@
 						<th>Usia</th>
 						<th>Alamat</th>
 						<th>No Telpn</th>
-						<th>Jumlah Qty Transaksi</th>
+						<th>Jumlah Transaksi</th>
 						<th>Total Pembelian</th>
 					</tr>
 				</thead>

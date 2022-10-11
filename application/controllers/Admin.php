@@ -21,7 +21,7 @@ class Admin extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Dashboard',
+			'title' => 'Beranda',
 			'total_produk' => $this->m_admin->total_produk(),
 			'total_pesanan' => $this->m_admin->total_pesanan(),
 			'total_pelanggan' => $this->m_admin->total_pelanggan(),

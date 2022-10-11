@@ -51,7 +51,7 @@ class Pelanggan_login
 	public function proteksi_halaman()
 	{
 		if ($this->ci->session->userdata('nama') == '') {
-			$this->ci->session->set_flashdata('error', 'Anda Belum Login');
+			$this->ci->session->set_flashdata('error', 'Anda Belum Masuk');
 			redirect('pelanggan/login');
 		}
 	}
@@ -69,7 +69,7 @@ class Pelanggan_login
 		$this->ci->session->set_userdata('desa');
 		$this->ci->session->set_userdata('kode_post');
 		$this->ci->session->unset_userdata('usia');
-		$this->ci->session->set_flashdata('pesan', 'Berhasil LogOut!!!!');
+		$this->ci->session->set_flashdata('pesan', 'Berhasil Keluar!!!!');
 		redirect('pelanggan/login');
 	}
 }

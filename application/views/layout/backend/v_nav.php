@@ -34,7 +34,7 @@
 																		} ?>">
 						<i class="nav-icon fas fa-home"></i>
 						<p>
-							Dashboard
+							Beranda
 						</p>
 					</a>
 				</li>
@@ -43,7 +43,7 @@
 					<a class="nav-link">
 						<i class="nav-icon fas fa-box"></i>
 						<p>
-							Master Produk
+							Data Master
 							<i class="right fas fa-angle-left"></i>
 						</p>
 					</a>

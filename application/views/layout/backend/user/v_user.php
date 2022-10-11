@@ -1,11 +1,11 @@
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Data User</h3>
+            <h3 class="card-title">Data Pengguna</h3>
 
             <div class="card-tools">
                 <button data-toggle="modal" data-target="#add" type="button" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>
-                    Add</button>
+                    Tambah</button>
             </div>
             <!-- /.card-tools -->
         </div>
@@ -24,12 +24,12 @@
                 <thead class="text-center">
                     <tr>
                         <th>No</th>
-                        <th>Nama User</th>
+                        <th>Nama Pengguna</th>
                         <th>Username</th>
                         <!--<th>Nama Pelanggan</th>-->
                         <th>Password</th>
                         <th>Level</th>
-                        <th>Action</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -117,7 +117,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Add user</h4>
+                <h4 class="modal-title">Tambah Pengguna</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -128,7 +128,7 @@
                 ?>
 
                 <div class="form-group">
-                    <label>Nama User</label>
+                    <label>Nama Pengguna</label>
                     <input type="text" name="nama_user" class="form-control" placeholder="Nama User" required>
                 </div>
 
@@ -151,8 +151,8 @@
                 </div>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
             <?php
             echo form_close();
@@ -171,7 +171,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit user</h4>
+                    <h4 class="modal-title">Edit Pengguna</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -182,7 +182,7 @@
                     ?>
 
                     <div class="form-group">
-                        <label>Nama User</label>
+                        <label>Nama Pengguna</label>
                         <input type="text" name="nama_user" value="<?= $value->nama_user ?>" class="form-control" placeholder="Nama User" required>
                     </div>
 
@@ -211,8 +211,8 @@
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
                 <?php
                 echo form_close();
@@ -232,7 +232,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete <?= $value->nama_user ?></h4>
+                    <h4 class="modal-title">Hapus <?= $value->nama_user ?></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -241,8 +241,8 @@
                     <h5>Apakah Anda Yakin Akan Hapus Data ini?</h5>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a href="<?= base_url('user/delete/' . $value->id_user) ?> " class="btn btn-primary">Delete</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <a href="<?= base_url('user/delete/' . $value->id_user) ?> " class="btn btn-primary">Hapus</a>
                 </div>
             </div>
             <!-- /.modal-content -->

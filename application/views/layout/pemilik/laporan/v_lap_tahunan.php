@@ -27,7 +27,7 @@
                             <th>No Transaksi</th>
                             <th>Tanggal</th>
                             <th>Harga</th>
-                            <th>Qty</th>
+                            <th>Jumlah</th>
                             <th>Total</th>
                         </tr>
                     </thead>
@@ -50,7 +50,7 @@
                         <?php } ?>
                     </tbody>
                 </table>
-                <h3>Grand Total : Rp. <?= number_format($grand_total, 0) ?> </h3>
+                <h3>Total Keseluruhan : Rp. <?= number_format($grand_total, 0) ?> </h3>
             </div>
             <!-- /.col -->
         </div>
@@ -59,7 +59,7 @@
         <!-- this row will not appear when printing -->
         <div class="row no-print">
             <div class="col-12">
-                <button class="btn btn-default" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                <button class="btn btn-default" onclick="window.print()"><i class="fas fa-print"></i> Cetak</button>
             </div>
         </div>
     </div>

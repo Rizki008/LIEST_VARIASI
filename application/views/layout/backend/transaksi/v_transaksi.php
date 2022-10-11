@@ -39,7 +39,7 @@
 							<th>No Order</th>
 							<th>Tanggal Order</th>
 							<th>Total Bayar</th>
-							<th>Action</th>
+							<th>Aksi</th>
 						</tr>
 						<?php foreach ($pesanan as $key => $value) { ?>
 							<tr>
@@ -234,7 +234,7 @@
 					<img class="img-fluid pad" src="<?= base_url('assets/bukti_bayar/' . $value->bukti_bayar) ?>" alt="">
 				</div>
 				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
 					<button type="submit" class="btn btn-primary">Batalkan</button>
 				</div>
 				<?php echo form_close() ?>

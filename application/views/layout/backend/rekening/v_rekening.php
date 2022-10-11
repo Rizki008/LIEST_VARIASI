@@ -27,7 +27,7 @@
 						<th>Nama Bank</th>
 						<th>No Rekening</th>
 						<th>Atas Nama</th>
-						<th>Action</th>
+						<th>Aksi</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -80,8 +80,8 @@
 
 			</div>
 			<div class="modal-footer justify-content-between">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="submit" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+				<button type="submit" class="btn btn-primary">Simpan</button>
 			</div>
 			<?php
 			echo form_close();
@@ -121,8 +121,8 @@
 
 				</div>
 				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+					<button type="submit" class="btn btn-primary">Simpan</button>
 				</div>
 				<?php
 				echo form_close();
@@ -138,7 +138,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">Delete <?= $value->no_rek ?></h4>
+					<h4 class="modal-title">Hapus <?= $value->no_rek ?></h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -147,8 +147,8 @@
 					<h5>Apakah Anda Yakin Akan Hapus Data ini?</h5>
 				</div>
 				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<a href="<?= base_url('rekening/delete/' . $value->id_rekening) ?> " class="btn btn-primary">Delete</a>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+					<a href="<?= base_url('rekening/delete/' . $value->id_rekening) ?> " class="btn btn-primary">Hapus</a>
 				</div>
 			</div>
 		</div>

@@ -26,9 +26,9 @@
 							<th scope="col">Produk</th>
 							<th scope="col">Warna</th>
 							<th scope="col">Harga</th>
-							<th scope="col">Quantity</th>
+							<th scope="col">Jumlah</th>
 							<th scope="col">Total Harga</th>
-							<th scope="col">Action</th>
+							<th scope="col">Aksi</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -86,7 +86,7 @@
 						<?php } ?>
 						<tr class="bottom_button">
 							<td>
-								<button class="gray_btn">Update Keranjang</button>
+								<button class="gray_btn">Perbaharui Keranjang</button>
 							</td>
 							<td>
 							</td>
@@ -109,7 +109,7 @@
 							<td>
 							</td>
 							<td>
-								<h5>Subtotal</h5>
+								<h5>Total Harga</h5>
 							</td>
 							<td>
 								<h5>Rp. <?= number_format($this->cart->total(), 0) ?></h5>

@@ -1,7 +1,7 @@
 <div class="col-md-12">
 	<div class="card card-primary">
 		<div class="card-header">
-			<h3 class="card-title">Data Produk</h3>
+			<h3 class="card-title">Data Produk Kurang Laris</h3>
 
 			<div class="card-tools">
 			</div>
@@ -29,7 +29,7 @@
 						<th>Stock</th>
 						<th>Deskripsi</th>
 						<th>Gambar</th>
-						<th>Action</th>
+						<th>Aksi</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -89,8 +89,8 @@
 
 				</div>
 				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+					<button type="submit" class="btn btn-primary">Simpan</button>
 				</div>
 				<?php
 				echo form_close();
@@ -106,7 +106,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">Delete <?= $value->nama_produk ?></h4>
+					<h4 class="modal-title">Hapus <?= $value->nama_produk ?></h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -115,8 +115,8 @@
 					<h5>Apakah Anda Yakin Akan Hapus Data ini?</h5>
 				</div>
 				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<a href="<?= base_url('produk/delete/' . $value->id_produk) ?> " class="btn btn-primary">Delete</a>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+					<a href="<?= base_url('produk/delete/' . $value->id_produk) ?> " class="btn btn-primary">Hapus</a>
 				</div>
 			</div>
 			<!-- /.modal-content -->

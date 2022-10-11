@@ -25,7 +25,7 @@
                             <th>No</th>
                             <th>Nama Produk</th>
                             <th>Harga</th>
-                            <th>Stock</th>
+                            <th>stok</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,7 +50,7 @@
         <!-- this row will not appear when printing -->
         <div class="row no-print">
             <div class="col-12">
-                <button class="btn btn-default" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+                <button class="btn btn-default" onclick="window.print()"><i class="fas fa-print"></i> Cetak</button>
             </div>
         </div>
     </div>

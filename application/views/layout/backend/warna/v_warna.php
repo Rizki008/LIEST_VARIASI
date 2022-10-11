@@ -20,7 +20,7 @@
 					<tr>
 						<th>Gambar Produk</th>
 						<th>Warna</th>
-						<th>Setting</th>
+						<th>Aksi</th>
 					</tr>
 				</thead>
 				<tbody>

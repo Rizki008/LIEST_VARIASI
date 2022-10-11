@@ -1,7 +1,7 @@
 <!-- DIRECT CHAT PRIMARY -->
 <div class="card card-prirary cardutline direct-chat direct-chat-primary">
 	<div class="card-header">
-		<h3 class="card-title">Direct Chat</h3>
+		<h3 class="card-title">Daftar Pesan</h3>
 
 		<div class="card-tools">
 			<span data-toggle="tooltip" title="3 New Messages" class="badge bg-primary">3</span>
@@ -50,7 +50,7 @@
 					<input type="text" name="pesan" placeholder="Type Message ..." class="form-control">
 					<input type="hidden" name="id_pelanggan" id="id_pelanggan" value="<?= $id_pelanggan ?>">
 					<span class="input-group-append">
-						<button type="submit" class="btn btn-primary">Send</button>
+						<button type="submit" class="btn btn-primary">Kirim</button>
 					</span>
 				</div>
 			</form>

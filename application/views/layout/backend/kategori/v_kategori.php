@@ -68,8 +68,8 @@
 
 			</div>
 			<div class="modal-footer justify-content-between">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="submit" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+				<button type="submit" class="btn btn-primary">Simpan</button>
 			</div>
 			<?php
 			echo form_close();
@@ -96,13 +96,13 @@
 
 					<div class="form-group">
 						<label>Nama kategori</label>
-						<input type="text" name="nama_kategori" value="<?= $value->nama_kategori ?>" class="form-control" placeholder="Nama User" required>
+						<input type="text" name="nama_kategori" value="<?= $value->nama_kategori ?>" class="form-control" placeholder="Nama Kategori" required>
 					</div>
 
 				</div>
 				<div class="modal-footer justify-content-between">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+					<button type="submit" class="btn btn-primary">Simpan</button>
 				</div>
 				<?php
 				echo form_close();

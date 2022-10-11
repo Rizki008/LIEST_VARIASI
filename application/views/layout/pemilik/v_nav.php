@@ -34,7 +34,7 @@
 																			} ?>">
 						<i class="nav-icon fas fa-home"></i>
 						<p>
-							Dashboard
+							Beranda
 						</p>
 					</a>
 				</li>
@@ -61,7 +61,7 @@
 																		} ?>">
 						<i class="nav-icon fas fa-users"></i>
 						<p>
-							User
+							Pengguna
 						</p>
 					</a>
 				</li>
