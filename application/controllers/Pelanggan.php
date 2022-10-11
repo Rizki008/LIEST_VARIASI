@@ -64,7 +64,7 @@ class Pelanggan extends CI_Controller
 				'alamat' => $this->input->post('alamat'),
 			);
 			$this->m_pelanggan->register($data);
-			$this->session->set_flashdata('pesan', 'Register Berhasil, Silahkan Untuk Login!!!');
+			$this->session->set_flashdata('pesan', 'Pendaftaran Berhasil, Silahkan Untuk Login!!!');
 			redirect('pelanggan/login');
 		}
 	}
