@@ -14,6 +14,7 @@ class Admin extends CI_Controller
 		$this->load->model('m_transaksi');
 		$this->load->model('m_produk');
 		$this->load->model('m_chatting');
+		$this->load->model('m_pelanggan');
 	}
 
 	// List all your items
@@ -27,6 +28,9 @@ class Admin extends CI_Controller
 			'total_transaksi' => $this->m_admin->total_transaksi(),
 			'grafik' => $this->m_transaksi->grafik(),
 			'grafik_pelanggan' => $this->m_transaksi->grafik_pelanggan(),
+			'grafik_alamat' => $this->m_transaksi->grafik_alamat(),
+			'grafik_usia' => $this->m_transaksi->grafik_usia(),
+			'grafik_kelamin' => $this->m_transaksi->grafik_kelamin(),
 			'isi' => 'v_admin'
 		);
 		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
@@ -89,6 +93,16 @@ class Admin extends CI_Controller
 			'diproses_pesanan' => $this->m_pesanan_masuk->diproses_pesanan(),
 			'proses_kirim' => $this->m_pesanan_masuk->proses_kirim(),
 			'isi' =>  'layout/backend/transaksi/v_detail'
+		);
+		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
+	}
+
+	public function pelanggandata()
+	{
+		$data = array(
+			'title' => 'Data Master Pelanggan',
+			'pelanggan' => $this->m_pelanggan->all_pelanggan(),
+			'isi' => 'layout/backend/pelanggan/v_pelanggan'
 		);
 		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
 	}

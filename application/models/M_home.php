@@ -65,6 +65,7 @@ class M_home extends CI_Model
 		$this->db->select('*');
 		$this->db->from('produk');
 		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
+		// $this->db->join('warna', 'produk.id_produk=warna.id_produk', 'left');
 		$this->db->where('produk.id_kategori', $id_kategori);
 		return $this->db->get()->result();
 	}

@@ -28,7 +28,7 @@
 		<!-- /.login-logo -->
 		<div class="card">
 			<div class="card-body login-card-body">
-				<p class="login-box-msg">Silahkan Login</p>
+				<p class="login-box-msg">Silahkan Masuk</p>
 
 				<?php
 
@@ -76,7 +76,7 @@
 					</div>
 					<!-- /.col -->
 					<div class="col-6">
-						<button type="submit" class="btn btn-primary btn-block">Log In</button>
+						<button type="submit" class="btn btn-primary btn-block">Masuk</button>
 					</div>
 					<!-- /.col -->
 				</div>

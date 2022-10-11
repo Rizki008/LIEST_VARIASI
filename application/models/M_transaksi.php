@@ -145,12 +145,14 @@ class M_transaksi extends CI_Model
 		$this->db->select('*');
 		$this->db->from('transaksi');
 		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->group_by('pelanggan.id_pelanggan');
+
 		$this->db->where('no_order', $no_order);
 		return $this->db->get()->result();
 	}
 	//and pesanan selesai
 
-	//grafik
+	//grafik analisiss produk paling laris di ambil dari data produk yang di beli oleh pelanggan. data tersebut di ambil di dari tabel rinci_transaksi untuk menghitung qty dan di join ke warna untuk mengambil data warna produk dan di join ke produk untuk mengambil nama produk.
 	public function grafik()
 	{
 		$this->db->select_sum('qty');
@@ -163,7 +165,7 @@ class M_transaksi extends CI_Model
 		$this->db->order_by('qty', 'desc');
 		return $this->db->get()->result();
 	}
-	//grafik
+	//grafik hampir sama dengan di atas bedanya di join dengan tabel pelanggan untuk mendapatkan data pelanggan
 	public function grafik_pelanggan()
 	{
 
@@ -179,5 +181,17 @@ class M_transaksi extends CI_Model
 		$this->db->group_by('pelanggan.id_pelanggan');
 		$this->db->order_by('qty', 'desc');
 		return $this->db->get()->result();
+	}
+	public function grafik_alamat()
+	{
+		return $this->db->query("SELECT SUM(qty) as jumlah, kecamatan FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY transaksi.id_pelanggan")->result();
+	}
+	public function grafik_usia()
+	{
+		return $this->db->query("SELECT SUM(qty) as total, usia FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY pelanggan.usia")->result();
+	}
+	public function grafik_kelamin()
+	{
+		return $this->db->query("SELECT SUM(qty) as hasil, jenis_kel, CASE WHEN jenis_kel=1 THEN 'laki-laki' WHEN jenis_kel=2 THEN 'perempuan' END AS jeniskelamin FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY pelanggan.jenis_kel")->result();
 	}
 }

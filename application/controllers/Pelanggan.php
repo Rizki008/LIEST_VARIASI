@@ -35,6 +35,11 @@ class Pelanggan extends CI_Controller
 		// 	'required' => '%s Mohon Untuk Diisi !!!',
 		// 	'matches' => '%s Password Tidak Sama !!!'
 		// ));
+		$this->form_validation->set_rules('kabupaten', 'Kabupaten', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+		$this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+		$this->form_validation->set_rules('desa', 'Desa', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+		$this->form_validation->set_rules('kode_post', 'Kode Post', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+		$this->form_validation->set_rules('alamat', 'Alamat Lengkap', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
 
 
 		if ($this->form_validation->run() == FALSE) {
@@ -52,6 +57,11 @@ class Pelanggan extends CI_Controller
 				'jenis_kel' => $this->input->post('jenis_kel'),
 				'email' => $this->input->post('email'),
 				'password' => $this->input->post('password'),
+				'kabupaten' => $this->input->post('kabupaten'),
+				'kecamatan' => $this->input->post('kecamatan'),
+				'desa' => $this->input->post('desa'),
+				'kode_post' => $this->input->post('kode_post'),
+				'alamat' => $this->input->post('alamat'),
 			);
 			$this->m_pelanggan->register($data);
 			$this->session->set_flashdata('pesan', 'Register Berhasil, Silahkan Untuk Login!!!');

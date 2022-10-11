@@ -22,7 +22,7 @@
 		echo form_open('belanja/add');
 		echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 		?>
-		<input type="hidden" name="id" value="<?= $data['produk']->id_produk ?>">
+		<input type="hidden" name="id" value="<?= $data['produk']->id_warna ?>">		<input type="hidden" name="id_produk" value="<?= $data['produk']->id_produk ?>">
 		<input type="hidden" class="price" name="price" value="<?= $data['produk']->harga - ($data['produk']->diskon / 100 * $data['produk']->harga) ?>">
 		<input type="hidden" name="name" value="<?= $data['produk']->nama_produk ?>">
 		<input type="hidden" name="qty" value="1">
@@ -47,14 +47,15 @@
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
 					<h3><?= $data['produk']->nama_produk ?></h3>
-					<h2>Rp. <?= number_format($data['produk']->harga - $data['produk']->diskon) ?></h2>
+					<h2>Rp. <?= number_format($data['produk']->harga - ($data['produk']->diskon / 100 * $data['produk']->harga), 0) ?></h2>
 					<ul class="list">
 						<li><a class="active" href="#"><span>Kategori</span> : <?= $data['produk']->nama_kategori ?></a></li>
-						<li><a href="#"><span>Stok</span> : <?= $data['produk']->stock ?></a></li>
+						<li><a href="#"><span>Stok</span> : <?= $data['produk']->stock ?></a></li><br>
 						<li><span>Warna Produk</span> :
+							<br>
 							<div class="col-md-4 form-group p_star">
-								<select name="id" id="produk">
-									<option value="">--Pilih Warna--</option>
+								<select name="id" id="warna">
+									<!-- <option value="">--Pilih Warna--</option> -->
 									<?php foreach ($data['warna'] as $key => $value) { ?>
 										<option data-stock="<?= $value->stock ?>" data-warna="<?= $value->warna ?>" data-diskon="Rp. <?= number_format($value->harga, 0) ?>" data-price-view="Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0) ?>" data-price="<?= $value->harga - ($value->diskon / 100 * $value->harga) ?>" value="<?= $value->id_warna ?>"><?= $value->warna ?></option>
 									<?php } ?>
@@ -156,9 +157,9 @@
 									<a href="#"><img src="<?php echo base_url('assets/gambar/' . $products->gambar) ?>" alt="<?= $products->nama_produk ?>" width="
 									100px"></a>
 									<div class="desc">
-										<a href="<?= base_url('home/detail_produk/' . $products->id_produk) ?>" class="title">Black lace Heels</a>
+										<a href="<?= base_url('home/detail_produk/' . $products->id_produk) ?>" class="title"><?= $products->nama_produk ?></a>
 										<div class="price">
-											<h6>Rp. <?= number_format($products->harga) ?></h6>
+											<h6>Rp. <?= number_format($products->harga - ($products->diskon / 100 * $products->harga), 0) ?></h6>
 										</div>
 									</div>
 								</div>

@@ -70,7 +70,7 @@
 					<a href="<?= base_url('auth/logout_user') ?>" class="nav-link">
 						<i class="nav-icon fas fa-angle-double-left"></i>
 						<p>
-							LogOut
+							Keluar
 						</p>
 					</a>
 				</li>

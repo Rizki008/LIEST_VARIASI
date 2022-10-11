@@ -70,6 +70,21 @@
 							<input type="text" class="form-control" id="no_tlpn" name="no_tlpn" placeholder="Nomor Telpon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nomor Telpon'" value="<?= set_value('no_tlpn') ?>">
 						</div>
 						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="kabupaten" name="kabupaten" placeholder="Kabupaten" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Kabupaten'" value="<?= set_value('kabupaten') ?>">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="Kecamatan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Kecamatan'" value="<?= set_value('kecamatan') ?>">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="desa" name="desa" placeholder="Desa" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Desa'" value="<?= set_value('desa') ?>">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="kode_post" name="kode_post" placeholder="Kode Post" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Kode Post'" value="<?= set_value('kode_post') ?>">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Lengkap'" value="<?= set_value('alamat') ?>">
+						</div>
+						<div class="col-md-12 form-group">
 							<button type="submit" value="submit" class="primary-btn">Registrasi</button>
 						</div>
 					</form>

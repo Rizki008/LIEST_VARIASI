@@ -78,6 +78,16 @@
 								<p>Produk Kurang Minat</p>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="<?= base_url('admin/pelanggandata') ?>" class="nav-link <?php if (
+																									$this->uri->segment(1) == 'admin/pelanggandata'
+																								) {
+																									echo "active";
+																								} ?>">
+								<i class="far fa-circle nav-icon"></i>
+								<p>Data Pelanggan</p>
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="nav-item">

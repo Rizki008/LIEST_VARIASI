@@ -51,9 +51,9 @@
 									<a href="#"><img src="<?php echo base_url('assets/gambar/' . $value->gambar) ?>" alt="<?= $value->nama_produk ?>" width="
 									100px"></a>
 									<div class="desc">
-										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="title">Black lace Heels</a>
+										<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="title"><?= $value->nama_produk ?></a>
 										<div class="price">
-											<h6>Rp. <?= number_format($value->harga) ?></h6>
+											<h6>Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0) ?></h6>
 										</div>
 									</div>
 								</div>
@@ -87,8 +87,9 @@
 							<?php
 							echo form_open('belanja/add');
 							echo form_hidden('id', $value->id_warna);
+														echo form_hidden('id_produk', $value->id_produk);
 							echo form_hidden('qty', 1);
-							echo form_hidden('price', $value->harga - $value->diskon);
+							echo form_hidden('price', $value->harga - ($value->diskon / 100 * $value->harga));
 							echo form_hidden('name', $value->nama_produk);
 							echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 							?>
@@ -98,15 +99,15 @@
 									<h6><?= $value->nama_produk ?></h6>
 									<div class="price">
 										<p class="price"><?php if ($value->diskon > 0) : ?>
-												<span class="mr-2 l-through">Rp. <?= number_format($value->harga, 0); ?></span><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
+												<span class="mr-2 l-through">Rp. <?= number_format($value->harga, 0); ?></span><span class="price-sale">Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0); ?></span>
 											<?php else : ?>
-												<span class="mr-2"><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
+												<span class="mr-2"><span class="price-sale">Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0); ?></span>
 												<?php endif; ?>
 										</p>
 									</div>
 									<div class="prd-bottom">
 
-										<button type="submit" class="btn social-info btn-small" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
+										<button type="submit" class="btn social-info btn-small" data-images="<?= $value->gambar ?>" data-warna="<?= $value->warna ?>" data-stock="<?= $value->stock ?>" data-name="<?= $value->nama_produk ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk ?>">
 											<span class="ti-bag"></span>
 											<p class="hover-text">Tambah Ke keranjang</p>
 										</button>
@@ -142,9 +143,10 @@
 						<div class="col-lg-3 col-md-6">
 							<?php
 							echo form_open('belanja/add');
-							echo form_hidden('id', $value->id_produk);
+							echo form_hidden('id_produk', $value->id_produk);
+														echo form_hidden('id', $value->id_warna);
 							echo form_hidden('qty', 1);
-							echo form_hidden('price', $value->harga);
+							echo form_hidden('price', $value->harga - ($value->diskon / 100 * $value->harga));
 							echo form_hidden('name', $value->nama_produk);
 							echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 							?>
@@ -154,9 +156,9 @@
 									<h6><?= $value->nama_produk ?></h6>
 									<div class="price">
 										<p class="price"><?php if ($value->diskon > 0) : ?>
-												<span class="mr-2 l-through">Rp. <?= number_format($value->harga, 0); ?></span><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
+												<span class="mr-2 l-through">Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga),  0); ?></span><span class="price-sale">Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0); ?></span>
 											<?php else : ?>
-												<span class="mr-2"><span class="price-sale">Rp. <?= number_format($value->harga - $value->diskon, 0); ?></span>
+												<span class="mr-2"><span class="price-sale">Rp. <?= number_format($value->harga, 0); ?></span>
 												<?php endif; ?>
 										</p>
 									</div>
@@ -212,7 +214,8 @@
 						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 							<div class="single-related-product d-flex">
 								<?php echo form_open('belanja/add');
-										echo form_hidden('id', $value->id_produk);
+										
+																	echo form_hidden('id', $value->id_produk);
 										echo form_hidden('qty', 1);
 										echo form_hidden('price', $value->harga - $value->diskon);
 										echo form_hidden('name', $value->nama_produk);
@@ -222,7 +225,7 @@
 								<div class="desc">
 									<a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="title"><?= $value->nama_produk ?></a>
 									<div class="price">
-										<h6>Rp. <?= number_format($value->diskon, 0) ?></h6>
+										<h6>Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0) ?></h6>
 										<h6 class="l-through">Rp. <?= number_format($value->harga, 0) ?></h6>
 									</div>
 								</div>

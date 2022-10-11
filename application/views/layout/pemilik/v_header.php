@@ -13,7 +13,7 @@ $daftar_chat = $this->m_chatting->daftar_chat();
 					<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 				</li>
 				<li class="nav-item d-none d-sm-inline-block">
-					<a href="<?= base_url('pemilik') ?>" class="nav-link">Home</a>
+					<a href="<?= base_url('pemilik') ?>" class="nav-link">Beranda</a>
 				</li>
 				<li class="nav-item d-none d-sm-inline-block">
 					<!-- <a href="<?= base_url('kategori') ?>" class="nav-link">Kategori</a> -->

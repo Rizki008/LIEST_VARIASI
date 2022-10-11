@@ -27,6 +27,9 @@ class Pemilik extends CI_Controller
             'total_transaksi' => $this->m_admin->total_transaksi(),
             'grafik' => $this->m_transaksi->grafik(),
             'grafik_pelanggan' => $this->m_transaksi->grafik_pelanggan(),
+            'grafik_alamat' => $this->m_transaksi->grafik_alamat(),
+            'grafik_usia' => $this->m_transaksi->grafik_usia(),
+            'grafik_kelamin' => $this->m_transaksi->grafik_kelamin(),
             'isi' => 'v_pemilik'
         );
         $this->load->view('layout/pemilik/v_wrapper', $data, FALSE);

@@ -46,6 +46,7 @@
 								<?php
 								echo form_open('belanja/add');
 								echo form_hidden('id', $value->id_produk);
+								// echo form_hidden('id_produk', $value->id_produk);
 								echo form_hidden('qty', 1);
 								echo form_hidden('price', $value->harga);
 								echo form_hidden('name', $value->nama_produk);
