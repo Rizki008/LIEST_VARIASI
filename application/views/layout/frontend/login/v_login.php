@@ -5,7 +5,7 @@
 			<div class="col-first">
 				<h1>Masuk</h1>
 				<nav class="d-flex align-items-center">
-					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+					<a href="index.html">Beranda<span class="lnr lnr-arrow-right"></span></a>
 					<a href="category.html">Masuk</a>
 				</nav>
 			</div>
@@ -22,8 +22,8 @@
 				<div class="login_box_img">
 					<img class="img-fluid" src="<?= base_url() ?>karma-master/img/login.jpg" alt="">
 					<div class="hover">
-						<h4>Registrasi</h4>
-						<a class="primary-btn" href="<?= base_url('pelanggan/register') ?>">Registrasi</a>
+						<h4>Daftar</h4>
+						<a class="primary-btn" href="<?= base_url('pelanggan/register') ?>">Daftar</a>
 					</div>
 				</div>
 			</div>

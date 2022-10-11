@@ -5,8 +5,8 @@
             <div class="col-first">
                 <h1>Kritik Saran</h1>
                 <nav class="d-flex align-items-center">
-                    <a href="<?= base_url() ?>">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="#">Blog</a>
+                    <a href="<?= base_url() ?>">Beranda<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="#">Kritik Saran</a>
                 </nav>
             </div>
         </div>
@@ -40,15 +40,7 @@
             <div class="col-lg-6">
                 <div class="review_box">
                     <h4>Terima kasih. pesanan Anda telah diterima</h4>
-                    <p>Your Rating:</p>
-                    <ul class="list">
-                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                    </ul>
-                    <p>Outstanding</p>
+                    <!-- <p>Outstanding</p> -->
                     <form class="row contact_form" action="<?= base_url('pesanan_saya/insert_riview') ?>" method="post" id="contactForm" novalidate="novalidate">
                         <input name="id_produk" class="form-control" cols="30" rows="10" placeholder="isi Produk" value="<?= $value->id_produk ?>" required hidden></input>
 

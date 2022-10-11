@@ -5,7 +5,7 @@
 			<div class="col-first">
 				<h1><?= $title ?></h1>
 				<nav class="d-flex align-items-center">
-					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+					<a href="index.html">Beranda<span class="lnr lnr-arrow-right"></span></a>
 					<a href="category.html"><?= $title ?></a>
 				</nav>
 			</div>
@@ -51,7 +51,7 @@
 						<div class="form-group">
 							<textarea class="form-control" name="pesan" id="pesan" rows="1" placeholder="Enter pesan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter pesan'"></textarea>
 						</div>
-						<button type="submit" value="submit" class="primary-btn">Send pesan</button>
+						<button type="submit" value="submit" class="primary-btn">Kirim Pesan</button>
 					</div>
 					<div class="col-md-12 text-right">
 

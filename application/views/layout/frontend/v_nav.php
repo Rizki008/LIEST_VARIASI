@@ -39,8 +39,8 @@
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('nama'); ?></a>
 						<ul class="dropdown-menu">
 							<li class="nav-item"><a class="nav-link" href="<?= base_url('pesanan_saya') ?>">Pesanan Saya</a></li>
-							<li class="nav-item"><a class="nav-link" href="<?= base_url('chatting_pelanggan') ?>">Chatting</a></li>
-							<li class="nav-item"><a class="nav-link" href="<?= base_url('pelanggan/logout') ?>">Logout</a></li>
+							<li class="nav-item"><a class="nav-link" href="<?= base_url('chatting_pelanggan') ?>">Pesan</a></li>
+							<li class="nav-item"><a class="nav-link" href="<?= base_url('pelanggan/logout') ?>">Keluar</a></li>
 						</ul>
 					<?php } ?>
 				</li>

@@ -85,7 +85,7 @@
 							<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Lengkap'" value="<?= set_value('alamat') ?>">
 						</div>
 						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" class="primary-btn">Registrasi</button>
+							<button type="submit" value="submit" class="primary-btn">Daftar</button>
 						</div>
 					</form>
 					<?php echo form_close() ?>

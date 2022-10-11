@@ -5,7 +5,7 @@
 			<div class="col-first">
 				<h1>Keranjang Belanja</h1>
 				<nav class="d-flex align-items-center">
-					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+					<a href="index.html">Beranda<span class="lnr lnr-arrow-right"></span></a>
 					<a href="category.html">Keranjang</a>
 				</nav>
 			</div>
