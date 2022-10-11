@@ -23,7 +23,6 @@
 		echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
 		?>
 		<input type="hidden" name="id" value="<?= $data['produk']->id_warna ?>">
-		<input type="hidden" name="id_produk" value="<?= $data['produk']->id_produk ?>">
 		<input type="hidden" class="price" name="price" value="<?= $data['produk']->harga - ($data['produk']->diskon / 100 * $data['produk']->harga) ?>">
 		<input type="hidden" name="name" value="<?= $data['produk']->nama_produk ?>">
 		<input type="hidden" name="qty" value="1">
@@ -51,12 +50,11 @@
 					<h2>Rp. <?= number_format($data['produk']->harga - ($data['produk']->diskon / 100 * $data['produk']->harga), 0) ?></h2>
 					<ul class="list">
 						<li><a class="active" href="#"><span>Kategori</span> : <?= $data['produk']->nama_kategori ?></a></li>
-						<li><a href="#"><span>Stok</span> : <?= $data['produk']->stock ?></a></li><br>
+						<li><a href="#"><span>Stok</span> : <?= $data['produk']->stock ?></a></li>
 						<li><span>Warna Produk</span> :
-							<br>
 							<div class="col-md-4 form-group p_star">
 								<select name="id" id="warna">
-									<!-- <option value="">--Pilih Warna--</option> -->
+									<option value="">--Pilih Warna--</option>
 									<?php foreach ($data['warna'] as $key => $value) { ?>
 										<option data-stock="<?= $value->stock ?>" data-warna="<?= $value->warna ?>" data-diskon="Rp. <?= number_format($value->harga, 0) ?>" data-price-view="Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga), 0) ?>" data-price="<?= $value->harga - ($value->diskon / 100 * $value->harga) ?>" value="<?= $value->id_warna ?>"><?= $value->warna ?></option>
 									<?php } ?>
@@ -70,7 +68,7 @@
 						<input type="number" id="quantity" name="qty" class="form-control" value="1" min="1" max="<?= $data['produk']->stock ?>">
 					</div>
 					<div class="card_area d-flex align-items-center">
-						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_warna ?>" data-id="<?= $data['produk']->id_produk ?>" class="primary-btn swalDefaultSuccess">Tambah Ke keranjang</button>
+						<button type="submit" data-images="<?= $data['produk']->gambar ?>" data-warna="<?= $data['produk']->warna ?>" data-stock="<?= $data['produk']->stock ?>" data-name="<?= $data['produk']->nama_produk ?>" data-price="<?= ($data['produk']->diskon > 0) ? ($data['produk']->harga - $data['produk']->diskon) : $data['produk']->harga ?>" data-id="<?= $data['produk']->id_warna ?>" class="primary-btn">Tambah Ke keranjang</button>
 					</div>
 					<?php echo form_close(); ?>
 				</div>
@@ -158,9 +156,9 @@
 									<a href="#"><img src="<?php echo base_url('assets/gambar/' . $products->gambar) ?>" alt="<?= $products->nama_produk ?>" width="
 									100px"></a>
 									<div class="desc">
-										<a href="<?= base_url('home/detail_produk/' . $products->id_produk) ?>" class="title"><?= $products->nama_produk ?></a>
+										<a href="<?= base_url('home/detail_produk/' . $products->id_produk) ?>" class="title">Black lace Heels</a>
 										<div class="price">
-											<h6>Rp. <?= number_format($products->harga - ($products->diskon / 100 * $products->harga), 0) ?></h6>
+											<h6>Rp. <?= number_format($products->harga) ?></h6>
 										</div>
 									</div>
 								</div>

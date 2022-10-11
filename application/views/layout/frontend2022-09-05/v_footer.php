@@ -244,20 +244,6 @@
 	});
 </script>
 
-<script>
-	console.log = function() {}
-	$("#warna").on('change', function() {
-
-		$(".warna").html($(this).find(':selected').attr('data-warna'));
-		$(".warna").val($(this).find(':selected').attr('data-warna'));
-
-		$(".stock").html($(this).find(':selected').attr('data-stock'));
-		$(".stock").val($(this).find(':selected').attr('data-stock'));
-
-		$(".price").html($(this).find(':selected').attr('data-price'));
-		$(".price").val($(this).find(':selected').attr('data-price'));
-	});
-</script>
 </body>
 
 </html>

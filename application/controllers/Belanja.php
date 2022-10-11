@@ -110,6 +110,7 @@ class Belanja extends CI_Controller
 					'no_order' => $this->input->post('no_order'),
 					'id_produk' => $item['id_produk'],
 					'id_warna' => $item['id'],
+					'id_produk' => $item['id_produk'],
 					'qty' => $this->input->post('qty' . $i++),
 				);
 				$this->m_transaksi->simpan_rinci_transaksi($data_rinci);
