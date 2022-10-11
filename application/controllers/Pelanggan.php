@@ -44,7 +44,7 @@ class Pelanggan extends CI_Controller
 
 		if ($this->form_validation->run() == FALSE) {
 			$data = array(
-				'title' => 'Registrasi Pelanggan',
+				'title' => 'Daftar Pelanggan',
 				'isi' => 'layout/frontend/register/v_register'
 			);
 			$this->load->view('layout/frontend/v_wrapper', $data, FALSE);
@@ -84,7 +84,7 @@ class Pelanggan extends CI_Controller
 			$this->pelanggan_login->login($email, $password);
 		}
 		$data = array(
-			'title' => 'Login Pelanggan',
+			'title' => 'Masuk Pelanggan',
 			'isi' => 'layout/frontend/login/v_login'
 		);
 		$this->load->view('layout/frontend/v_wrapper', $data, FALSE);

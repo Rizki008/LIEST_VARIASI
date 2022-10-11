@@ -18,7 +18,7 @@
 			}
 			?>
 			<ul class="nav navbar-nav menu_nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
+				<li class="nav-item active"><a class="nav-link" href="<?= base_url() ?>">Beranda</a></li>
 				<?php $kategori = $this->m_home->kategori_produk(); ?>
 				<li class="nav-item submenu dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kategori Produk</a>
@@ -33,7 +33,7 @@
 					<?php if ($this->session->userdata('email') == "") { ?>
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Akun</a>
 						<ul class="dropdown-menu">
-							<li class="nav-item"><a class="nav-link" href="<?= base_url('pelanggan/register') ?>">Login/Register</a></li>
+							<li class="nav-item"><a class="nav-link" href="<?= base_url('pelanggan/register') ?>">Masuk/Daftar</a></li>
 						</ul>
 					<?php } else { ?>
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('nama'); ?></a>
