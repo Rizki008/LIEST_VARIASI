@@ -184,7 +184,7 @@ class M_transaksi extends CI_Model
 	}
 	public function grafik_alamat()
 	{
-		return $this->db->query("SELECT SUM(qty) as jumlah, kecamatan FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY transaksi.id_pelanggan")->result();
+		return $this->db->query("SELECT SUM(qty) as jumlah, kecamatan FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY pelanggan.kecamatan")->result();
 	}
 	public function grafik_usia()
 	{
