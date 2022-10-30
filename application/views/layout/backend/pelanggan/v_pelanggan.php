@@ -40,9 +40,9 @@
 							<td><?= $no++; ?></td>
 							<td><?= $value->nama ?></td>
 							<td>
-								<?php if ($value->jenis_kel = 1) { ?>
+								<?php if ($value->jenis_kel == 1) { ?>
 									<span class="badge bg-primary">Laki-Laki</span>
-								<?php } elseif ($value->jenis_kel = 2) { ?>
+								<?php } elseif ($value->jenis_kel == 2) { ?>
 									<span class="badge bg-warning">Perempuan</span>
 								<?php } ?>
 							</td>
