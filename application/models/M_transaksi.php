@@ -188,8 +188,25 @@ class M_transaksi extends CI_Model
 	}
 	public function grafik_usia()
 	{
-		return $this->db->query("SELECT SUM(qty) as total, usia FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY pelanggan.usia")->result();
+		return $this->db->query("SELECT
+		CASE
+			WHEN usia < 24 THEN '... - 24 Usia Muda'
+			WHEN usia BETWEEN 24 and 34 THEN '25 - 34 Pekerja Awal'
+			WHEN usia BETWEEN 34 and 44 THEN '35 - 44 Paruh Baya'
+			WHEN usia BETWEEN 44 and 54 THEN '45 - 54 pra-pensiun'
+			WHEN usia >= 54 THEN '55 - ... pensiun'
+			WHEN usia IS NULL THEN '(NULL)'
+		END as range_umur,
+		COUNT(*) AS jumlah
+	
+	FROM (select * from pelanggan)  as dummy_table
+	GROUP BY range_umur
+	ORDER BY range_umur;")->result();
 	}
+	// public function grafik_usia()
+	// {
+	// 	return $this->db->query("SELECT SUM(qty) as total, usia FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY pelanggan.usia")->result();
+	// }
 	public function grafik_kelamin()
 	{
 		return $this->db->query("SELECT SUM(qty) as hasil, jenis_kel, CASE WHEN jenis_kel=1 THEN 'laki-laki' WHEN jenis_kel=2 THEN 'perempuan' END AS jeniskelamin FROM rinci_transaksi JOIN transaksi ON rinci_transaksi.no_order=transaksi.no_order JOIN pelanggan ON transaksi.id_pelanggan=pelanggan.id_pelanggan GROUP BY pelanggan.jenis_kel")->result();

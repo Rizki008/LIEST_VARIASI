@@ -452,8 +452,8 @@
 		<div class="card-body">
 			<?php
 			foreach ($grafik_usia as $key => $value) {
-				$usia[] = $value->usia;
-				$total[] = $value->total;
+				$range_umur[] = $value->range_umur;
+				$jumlah[] = $value->jumlah;
 			}
 			?>
 			<canvas id="myAnjani" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
@@ -462,10 +462,10 @@
 				var myAnjani = new Chart(ctx, {
 					type: 'bar',
 					data: {
-						labels: <?= json_encode($usia) ?>,
+						labels: <?= json_encode($range_umur) ?>,
 						datasets: [{
 							label: 'Grafik Analisis Usia Pelanggan',
-							data: <?= json_encode($total) ?>,
+							data: <?= json_encode($jumlah) ?>,
 							backgroundColor: [
 								'rgba(255, 99, 132, 0.80)',
 								'rgba(54, 162, 235, 0.80)',
@@ -589,83 +589,15 @@
 					data: {
 						labels: <?= json_encode($jeniskelamin) ?>,
 						datasets: [{
-							label: 'Grafik Alamat Pelanggan',
+							label: 'Grafik Jenis Kelamin Pelanggan',
 							data: <?= json_encode($hasil) ?>,
 							backgroundColor: [
-								'rgba(255, 99, 132, 0.80)',
-								'rgba(54, 162, 235, 0.80)',
-								'rgba(255, 206, 86, 0.80)',
-								'rgba(75, 192, 192, 0.80)',
-								'rgba(153, 102, 255, 0.80)',
-								'rgba(255, 159, 64, 0.80)',
-								'rgba(201, 76, 76, 0.3)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(0, 140, 162, 1)',
-								'rgba(158, 109, 8, 1)',
-								'rgba(201, 76, 76, 0.8)',
-								'rgba(0, 129, 212, 1)',
-								'rgba(201, 77, 201, 1)',
-								'rgba(255, 207, 207, 1)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(128, 98, 98, 1)',
-								'rgba(0, 0, 0, 1)',
-								'rgba(128, 128, 128, 1)',
-								'rgba(255, 99, 132, 0.80)',
-								'rgba(54, 162, 235, 0.80)',
-								'rgba(255, 206, 86, 0.80)',
-								'rgba(75, 192, 192, 0.80)',
-								'rgba(153, 102, 255, 0.80)',
-								'rgba(255, 159, 64, 0.80)',
-								'rgba(201, 76, 76, 0.3)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(0, 140, 162, 1)',
-								'rgba(158, 109, 8, 1)',
-								'rgba(201, 76, 76, 0.8)',
-								'rgba(0, 129, 212, 1)',
-								'rgba(201, 77, 201, 1)',
-								'rgba(255, 207, 207, 1)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(128, 98, 98, 1)',
-								'rgba(0, 0, 0, 1)',
-								'rgba(128, 128, 128, 1)'
+								'rgba(0, 193, 253, 0.78)',
+								'rgba(245, 40, 145, 0.8)',
 							],
 							borderColor: [
-								'rgba(255, 99, 132, 1)',
-								'rgba(54, 162, 235, 1)',
-								'rgba(255, 206, 86, 1)',
-								'rgba(75, 192, 192, 1)',
-								'rgba(153, 102, 255, 1)',
-								'rgba(255, 159, 64, 1)',
-								'rgba(201, 76, 76, 0.3)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(0, 140, 162, 1)',
-								'rgba(158, 109, 8, 1)',
-								'rgba(201, 76, 76, 0.8)',
-								'rgba(0, 129, 212, 1)',
-								'rgba(201, 77, 201, 1)',
-								'rgba(255, 207, 207, 1)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(128, 98, 98, 1)',
-								'rgba(0, 0, 0, 1)',
-								'rgba(128, 128, 128, 1)',
-								'rgba(255, 99, 132, 1)',
-								'rgba(54, 162, 235, 1)',
-								'rgba(255, 206, 86, 1)',
-								'rgba(75, 192, 192, 1)',
-								'rgba(153, 102, 255, 1)',
-								'rgba(255, 159, 64, 1)',
-								'rgba(201, 76, 76, 0.3)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(0, 140, 162, 1)',
-								'rgba(158, 109, 8, 1)',
-								'rgba(201, 76, 76, 0.8)',
-								'rgba(0, 129, 212, 1)',
-								'rgba(201, 77, 201, 1)',
-								'rgba(255, 207, 207, 1)',
-								'rgba(201, 77, 77, 1)',
-								'rgba(128, 98, 98, 1)',
-								'rgba(0, 0, 0, 1)',
-								'rgba(128, 128, 128, 1)'
+								'rgba(0, 193, 253, 0.78)',
+								'rgba(245, 40, 145, 0.8)',
 							],
 							fill: false,
 							borderWidth: 1
