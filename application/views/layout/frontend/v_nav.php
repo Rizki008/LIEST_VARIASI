@@ -40,6 +40,7 @@
 						<ul class="dropdown-menu">
 							<li class="nav-item"><a class="nav-link" href="<?= base_url('pesanan_saya') ?>">Pesanan Saya</a></li>
 							<li class="nav-item"><a class="nav-link" href="<?= base_url('chatting_pelanggan') ?>">Pesan</a></li>
+							<li class="nav-item"><a class="nav-link" href="<?= base_url('pesanan_saya/history') ?>">History Belanja</a></li>
 							<li class="nav-item"><a class="nav-link" href="<?= base_url('pelanggan/logout') ?>">Keluar</a></li>
 						</ul>
 					<?php } ?>

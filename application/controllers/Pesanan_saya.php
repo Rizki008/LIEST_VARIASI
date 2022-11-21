@@ -129,4 +129,14 @@ class Pesanan_saya extends CI_Controller
 		$this->session->set_flashdata('pesan', 'Berhasil Memberi Riview');
 		redirect('pesanan_saya');
 	}
+
+	public function history()
+	{
+		$data = array(
+			'title' => "history Pembelian",
+			'history' => $this->m_transaksi->history(),
+			'isi' => 'layout/frontend/pesanan/v_history'
+		);
+		$this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+	}
 }
