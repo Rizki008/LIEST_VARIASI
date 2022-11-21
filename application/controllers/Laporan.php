@@ -83,4 +83,20 @@ class Laporan extends CI_Controller
 		);
 		$this->load->view('layout/pemilik/v_wrapper', $data, FALSE);
 	}
+	public function lap_pelanggan()
+	{
+		$tanggal = $this->input->post('tanggal');
+		$bulan = $this->input->post('bulan');
+		$tahun = $this->input->post('tahun');
+
+		$data = array(
+			'title' => 'Laporan Pelanggan',
+			'tanggal' => $tanggal,
+			'bulan' => $bulan,
+			'tahun' => $tahun,
+			'laporan' => $this->m_laporan->lap_pelanggan($tanggal, $bulan, $tahun),
+			'isi' => 'layout/pemilik/laporan/v_lap_pelanggan'
+		);
+		$this->load->view('layout/pemilik/v_wrapper', $data, FALSE);
+	}
 }
