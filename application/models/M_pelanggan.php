@@ -25,7 +25,7 @@ class M_pelanggan extends CI_Model
 
 	public function all_pelanggan()
 	{
-		return $this->db->query("SELECT *, SUM(`rinci_transaksi`.`qty`) AS `qty`, SUM(transaksi.total_bayar) AS total_bayar FROM `pelanggan` LEFT JOIN `transaksi` ON `pelanggan`.`id_pelanggan` = `transaksi`.`id_pelanggan` LEFT JOIN `rinci_transaksi` ON `transaksi`.`no_order` = `rinci_transaksi`.`no_order` GROUP BY rinci_transaksi.no_order ORDER BY `pelanggan`.`id_pelanggan` DESC;")->result();
+		return $this->db->query("SELECT *, SUM(`rinci_transaksi`.`qty`) AS `qty`, SUM(transaksi.total_bayar) AS total_bayar, transaksi.no_order FROM `pelanggan` LEFT JOIN `transaksi` ON `pelanggan`.`id_pelanggan` = `transaksi`.`id_pelanggan` LEFT JOIN `rinci_transaksi` ON `transaksi`.`no_order` = `rinci_transaksi`.`no_order` GROUP BY rinci_transaksi.no_order ORDER BY `pelanggan`.`id_pelanggan` DESC;")->result();
 		// $this->db->select('*');
 		// $this->db->from('pelanggan');
 		// $this->db->join('transaksi', 'pelanggan.id_pelanggan = transaksi.id_pelanggan', 'left');

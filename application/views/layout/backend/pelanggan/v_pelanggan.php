@@ -29,8 +29,9 @@
 						<th>Usia</th>
 						<th>Alamat</th>
 						<th>No Telpn</th>
-						<th>Jumlah Transaksi</th>
-						<th>Total Pembelian</th>
+						<th>Action</th>
+						<!-- <th>Jumlah Transaksi</th>
+						<th>Total Pembelian</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -51,10 +52,11 @@
 								<?= $value->kabupaten ?> <?= $value->kecamatan ?> <?= $value->desa ?> <?= $value->kode_post ?>
 							</td>
 							<td><?= $value->no_tlpn ?></td>
-							<td><?= $value->qty ?></td>
+							<td><a href="<?= base_url('admin/detail_belanja_pelanggan/' . $value->no_order) ?>" class="btn btn-primary">Detail</a></td>
+							<!-- <td><?= $value->qty ?></td>
 							<td>
 								Rp. <?= number_format($value->total_bayar, 0)  ?>
-							</td>
+							</td> -->
 						</tr>
 
 					<?php } ?>

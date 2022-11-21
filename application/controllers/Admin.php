@@ -106,6 +106,17 @@ class Admin extends CI_Controller
 		);
 		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
 	}
+	public function detail_belanja_pelanggan($no_order)
+	{
+		$data = array(
+			'title' => 'Pesanan',
+			'pesanan_detail' => $this->m_transaksi->pesanan_detail($no_order),
+			'diproses_pesanan' => $this->m_pesanan_masuk->diproses_pesanan(),
+			'proses_kirim' => $this->m_pesanan_masuk->proses_kirim(),
+			'isi' =>  'layout/backend/pelanggan/v_detail'
+		);
+		$this->load->view('layout/backend/v_wrapper', $data, FALSE);
+	}
 }
 
 /* End of file Admin.php */
