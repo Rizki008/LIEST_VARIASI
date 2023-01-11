@@ -69,6 +69,45 @@ class M_laporan extends CI_Model
 		$this->db->order_by('transaksi.id_pelanggan', 'desc');
 		return $this->db->get()->result();
 	}
+	public function lap_usia($tanggal, $bulan, $tahun)
+	{
+		$this->db->select('*');
+		$this->db->from('rinci_transaksi');
+		$this->db->join('produk', 'produk.id_produk = rinci_transaksi.id_produk', 'left');
+		$this->db->join('transaksi', 'transaksi.no_order = rinci_transaksi.no_order', 'left');
+		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->where('DAY(transaksi.tgl_order)', $tanggal);
+		$this->db->where('MONTH(transaksi.tgl_order)', $bulan);
+		$this->db->where('YEAR(transaksi.tgl_order)', $tahun);
+		$this->db->order_by('transaksi.id_pelanggan', 'desc');
+		return $this->db->get()->result();
+	}
+	public function lap_alamat($tanggal, $bulan, $tahun)
+	{
+		$this->db->select('*,transaksi.alamat,rinci_transaksi.qty,pelanggan.nama');
+		$this->db->from('rinci_transaksi');
+		$this->db->join('produk', 'produk.id_produk = rinci_transaksi.id_produk', 'left');
+		$this->db->join('transaksi', 'transaksi.no_order = rinci_transaksi.no_order', 'left');
+		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->where('DAY(transaksi.tgl_order)', $tanggal);
+		$this->db->where('MONTH(transaksi.tgl_order)', $bulan);
+		$this->db->where('YEAR(transaksi.tgl_order)', $tahun);
+		$this->db->order_by('transaksi.id_pelanggan', 'desc');
+		return $this->db->get()->result();
+	}
+	public function lap_jk($tanggal, $bulan, $tahun)
+	{
+		$this->db->select('*');
+		$this->db->from('rinci_transaksi');
+		$this->db->join('produk', 'produk.id_produk = rinci_transaksi.id_produk', 'left');
+		$this->db->join('transaksi', 'transaksi.no_order = rinci_transaksi.no_order', 'left');
+		$this->db->join('pelanggan', 'transaksi.id_pelanggan = pelanggan.id_pelanggan', 'left');
+		$this->db->where('DAY(transaksi.tgl_order)', $tanggal);
+		$this->db->where('MONTH(transaksi.tgl_order)', $bulan);
+		$this->db->where('YEAR(transaksi.tgl_order)', $tahun);
+		$this->db->order_by('transaksi.id_pelanggan', 'desc');
+		return $this->db->get()->result();
+	}
 }
 
 /* End of file M_laporan.php */

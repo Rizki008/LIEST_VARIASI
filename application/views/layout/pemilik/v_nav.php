@@ -52,6 +52,18 @@
 						</p>
 					</a>
 				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('laporananalisis') ?>" class="nav-link <?php if (
+																						$this->uri->segment(1) == 'laporananalisis'
+																					) {
+																						echo "active";
+																					} ?>">
+						<i class="nav-icon fas fa-address-book"></i>
+						<p>
+							Laporan Analisis
+						</p>
+					</a>
+				</li>
 
 				<li class="nav-item">
 					<a href="<?= base_url('user') ?>" class="nav-link <?php if (

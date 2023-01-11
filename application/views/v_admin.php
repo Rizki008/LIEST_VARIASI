@@ -453,8 +453,8 @@
 		<div class="card-body">
 			<?php
 			foreach ($grafik_usia as $key => $value) {
-				$usia[] = $value->usia;
-				$total[] = $value->total;
+				$range_umur[] = $value->range_umur;
+				$jumlah[] = $value->jumlah;
 			}
 			?>
 			<canvas id="myAnjani" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
@@ -463,10 +463,10 @@
 				var myAnjani = new Chart(ctx, {
 					type: 'bar',
 					data: {
-						labels: <?= json_encode($usia) ?>,
+						labels: <?= json_encode($range_umur) ?>,
 						datasets: [{
 							label: 'Grafik Analisis Usia Pelanggan',
-							data: <?= json_encode($total) ?>,
+							data: <?= json_encode($jumlah) ?>,
 							backgroundColor: [
 								'rgba(255, 99, 132, 0.80)',
 								'rgba(54, 162, 235, 0.80)',
